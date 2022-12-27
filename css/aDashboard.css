@@ -34,7 +34,7 @@ nav {
     height: 100%;
     left: 0;
     background: rgba(54, 122, 145, 1);
-    width: 90px;
+    width: 60px;
     overflow: hidden;
     transition: width 0.2s linear;
     box-shadow: 0 20px 35px pink;
@@ -45,12 +45,12 @@ nav {
     text-align: center;
     display: flex;
     transition: all 0.5s ease;
-    margin: 10px 0 0 10px;
+    margin: 10px 0 0 3px;
 } 
 
 .logo img {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     
 }
 
@@ -64,12 +64,12 @@ nav {
     text-align: center;
     display: flex;
     transition: all 0.5s ease;
-    margin: 10px 0 0 10px;
+    margin: 10px 0 0 5px;
 } 
 
 .menu img {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
 }
 
 .menu span {
