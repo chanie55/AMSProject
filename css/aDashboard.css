@@ -119,6 +119,7 @@ nav:hover{
 h2 {
     margin-left: 92px;
     margin-top: 20px;
+    margin-bottom: 0px;
 }
 .flex-container {
     display: flex;
@@ -128,8 +129,25 @@ h2 {
 .flex-container > div {
     background-color: #f1f1f1;
     justify-content: center;
-    margin: 180px;
+    margin: 20px;
+    margin-left: 45px;
+    margin-top: 0px;
     padding: 10px;
     font-size: 20px;
   }
 
+.tenant {
+    width: 15%;
+    padding-top: 60px;
+    margin-top: 0px;
+}
+.roomNo{
+    width: 15%;
+    padding-top: 60px;
+    margin-top: 0px;   
+}
+.bed{
+    width: 15%;
+    padding-top: 60px;
+    margin-top: 0px;   
+}
