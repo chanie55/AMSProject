@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+if (isset($_SESSION['username'] && isset($_SESSION['password'])) {
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -97,3 +104,10 @@
         </section>
     </body>
 </html>
+
+<?php
+} else {
+    header("Location: adminDashboard.php");
+                    exit();
+}
+?>
