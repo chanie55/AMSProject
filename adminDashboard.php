@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-if (isset($_SESSION['username'] && isset($_SESSION['password'])) {
-
 ?>
 
 <!DOCTYPE html>
@@ -104,10 +102,3 @@ if (isset($_SESSION['username'] && isset($_SESSION['password'])) {
         </section>
     </body>
 </html>
-
-<?php
-} else {
-    header("Location: adminDashboard.php");
-                    exit();
-}
-?>
