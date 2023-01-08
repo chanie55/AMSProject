@@ -41,6 +41,7 @@ h3 {
 	padding-right: 25px;
 	font-size: 15px;
 	cursor: pointer;
+    width: 100px;
 }
 
 .btnLogin:hover {
