@@ -30,6 +30,7 @@ h3 {
 
 .btnLogin {
 	background-color: rgba(136, 191, 203, 1);
+    color: black;
 	border-radius: 25px;
 	border-style: none;
     margin-top: 10px;
@@ -40,25 +41,18 @@ h3 {
 	padding-left: 25px;
 	padding-right: 25px;
 	font-size: 15px;
+    font-weight: medium;
 	cursor: pointer;
     width: 100px;
 }
 
 .btnLogin:hover {
-    background-color: rgb(20, 76, 116);
-    color: white;
-}
-
-input[type="checkbox"] {
-    display: none;
-}
-
-#show:checked ~ .form {
-    display: block;
+    background-color: rgb(148, 216, 231);
+    color: black;
 }
 
 .form {
-    display: none;
+    display: block;
     position: absolute;
     top: 60%;
     left: 50%;
@@ -69,8 +63,9 @@ input[type="checkbox"] {
     border: 1px solid rgba(19, 52, 76, 1);
 }
 
+
 .form.active {
-    display: block;
+    display: none;
 }
 
 .form .close {
@@ -117,7 +112,7 @@ input {
     font-size: 16px;
 }
 
-.login-submit {
+.loginbtn {
     display: block;
     width: 93%;
     padding: 8px;
@@ -142,10 +137,9 @@ a:hover {
     text-decoration: underline;
 }
 
-button:hover {
-    background-color: rgba(136, 191, 203, 1);
-    color: black;
-
+.loginbtn:hover {
+    background-color: rgb(28, 78, 114);
+    color: white;
 }
 
 .error {

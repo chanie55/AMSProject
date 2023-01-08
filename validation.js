@@ -15,7 +15,6 @@ form1.addEventListener('submit', (e) => {
 
 function validate() {
     if (username.value.length == "") {
-        username.style.border-bottom = "1px solid red";
         pass_error.style.display = "block";
         username.focus();
         return false;

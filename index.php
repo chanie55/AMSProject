@@ -19,11 +19,10 @@
             <button id = "show-login" class = "btnLogin"> LOGIN </button>
         </header>
 
-       <input type="checkbox" id="show">
         <div class = "form">
             <label class="close" title="close">&times;</label>
             
-            <form id = "form1" name = "formlogin" method = "POST" action="login.php" onSubmit = "return validate();">
+            <form id = "form1" name = "formlogin" method = "POST" action="login.php">
                 <h4>Login</h4>
                     <?php
                         if (isset($_GET['error'])) { ?>
@@ -39,19 +38,21 @@
                 <input type="password" name = "password">
                 <div id = "pass-error"> Password is required </div>
                 <a href="#">Forgot Password?</a>
-                <button type="submit" name = "login-submit">Login</button>
+                <button type="submit" class= "loginbtn" name = "login-submit">Login</button>
             </form>
         </div> 
-
+        
         <script defer scr = "validation.js"> 
             document.querySelector("#show-login").addEventListener("click", function() {
                 document.querySelector(".form").classList.add("active");
+
+                
             })
 
             document.querySelector(".form .close").addEventListener("click", function() {
                 document.querySelector(".form").classList.remove("active");
             })
-        </script>
+        </script> 
         
     </body>
 </html>

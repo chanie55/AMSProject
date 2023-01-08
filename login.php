@@ -15,6 +15,7 @@ if(isset($_POST['login-submit'])){
 
     if (empty($uname)) {
         header("Location: index.php?error=Username is required");
+      
         exit();
     } else if (empty($pass)) {
         header("Location: index.php?error=Password is required");
