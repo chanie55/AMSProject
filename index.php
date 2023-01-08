@@ -52,5 +52,6 @@
                 document.querySelector(".form").classList.remove("active");
             })
         </script>
+        
     </body>
 </html>
