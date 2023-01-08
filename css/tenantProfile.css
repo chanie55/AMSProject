@@ -141,7 +141,7 @@ nav:hover{
 }
 
 h2 {
-    margin-left: 92px;
+    margin-left: 201px;
     margin-top: 20px;
     color: rgba(19, 52, 76, 1);
     font-size: 1cm;
@@ -193,7 +193,7 @@ h2 {
 }
 
 .search_wrap .search_box .btn:hover{
-	background:rgb(3, 44, 82);	
+	background:rgba(54, 122, 145, 1);	
 }
 
 .search_wrap .search_box .btn.btn_common .fas{
@@ -261,6 +261,7 @@ h2 {
     text-align: left;
     background-color: rgb(3, 44, 82);
     color: white;
+    text-align: center;
 }
 
 
