@@ -1,7 +1,7 @@
 <?php
 include "dbconn.php";
 
-if(isset($_POST['username']) && isset($_POST['password'])){
+if(isset($_POST['login-submit'])){
 
     function validate($data) {
         $data = trim($data);
@@ -20,7 +20,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         header("Location: index.php?error=Password is required");
         exit();
     } else {
-        $sql = "SELECT * FROM adminList WHERE username = '$uname' AND password = '$password'";
+        $sql = "SELECT * FROM adminlist WHERE username = '$uname' AND password = '$pass'";
 
         $result = mysqli_query($conn, $sql);
 

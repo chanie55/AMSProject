@@ -1,59 +1,56 @@
-<?php
-/*
-    $uname = $_POST['username'];
-    $pass = $_POST['password'];
-
-    $sql = "SELECT * FROM adminList WHERE username = '".$uname."' AND password = '".$password."' limit 1";
-
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_array($result);
-
-    if ($row['username'] == $uname && $row['password'] == $password){
-        echo '<a href = "adminDashboard.php">
-        <input type = "submit"/>
-        </a>';
-    } else {
-        echo "Incorrect!";
-    } 
- */
-
-?>
-
 
 <!DOCTYPE html>
 <html>
     <head>
         <link rel = "stylesheet" href = "css\style.css"/>
+
+        <style>
+            <?php
+                include "CSS/style.css"
+            ?>
+        </style>
+
     </head>
     <body>
         <header>
             <h3>
                 Apartment Management System
             </h3>
-            <label for="show" class = "btnLogin"> LOGIN </label>
+            <button id = "show-login" class = "btnLogin"> LOGIN </button>
         </header>
 
-        <input type="checkbox" id="show">
+       <input type="checkbox" id="show">
         <div class = "form">
-            <label for="show" class="close" title="close">&times;</label>
+            <label class="close" title="close">&times;</label>
             
-            <form method = "POST" action="login.php">
+            <form id = "form1" name = "formlogin" method = "POST" action="login.php" onSubmit = "return validate();">
                 <h4>Login</h4>
-                <?php if (isset($_GET['error'])) { ?>
-                    <p class = "error">
-                        <?php 
-                            echo $_GET['error']; 
-                        ?>
-                    </p>
-                   <?php } ?>
-
+                    <?php
+                        if (isset($_GET['error'])) { ?>
+                            <p class = "error">
+                                <?php 
+                                    echo $_GET['error']; ?>
+                            </p>
+                        <?php } ?>
                 <label>Username</label>
                 <input type="text" name = "username">
+                <div id = "uname-error"> Username is required </div>
                 <label>Password</label>
                 <input type="password" name = "password">
+                <div id = "pass-error"> Password is required </div>
                 <a href="#">Forgot Password?</a>
-                <button type="submit" name = "login-submit" /*onclick="location.href='adminDashboard.html'"*/>Login</button>
+                <button type="submit" name = "login-submit">Login</button>
             </form>
-        </div>
+        </div> 
+
+        <script defer scr = "validation.js"> 
+            document.querySelector("#show-login").addEventListener("click", function() {
+                document.querySelector(".form").classList.add("active");
+            })
+
+            document.querySelector(".form .close").addEventListener("click", function() {
+                document.querySelector(".form").classList.remove("active");
+            })
+        </script>
     </body>
 </html>
