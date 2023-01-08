@@ -24,5 +24,91 @@
                 <button type="button" onclick="location.href='adminDashboard.html'">Login</button>
             </form>
         </div>
+
+         <!--PICTURES NGA MUDAGAN -->
+         <div class="body">
+            <div class="back"></div>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <img src="photos/bh1.jpg" style="height: 300px; width: 500px;">
+                </div>
+
+                <div class="mySlides fade">
+                  <img src="photos/bh2.jpg" style="height: 300px; width: 500px;">
+                </div>
+
+                <div class="mySlides fade">
+                  <img src="photos/bh3.jpg" style="height: 300px; width: 500px;">
+                </div>
+				
+				 <div class="mySlides fade">
+                  <img src="" style="height: 300px; width: 500px;">
+                </div>
+				
+				 <div class="mySlides fade">
+                  <img src="" style="height: 300px; width: 500px;">
+                </div>
+				
+				 <div class="mySlides fade">
+                  <img src="" style="height: 300px; width: 500px;">
+                </div>
+				
+				 <div class="mySlides fade">
+                  <img src="" style="height: 300px; width: 500px;">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <br>
+
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+				  <span class="dot" onclick="currentSlide(4)"></span> 
+				  <span class="dot" onclick="currentSlide(5)"></span> 
+				  <span class="dot" onclick="currentSlide(6)"></span> 
+				  <span class="dot" onclick="currentSlide(7)"></span> 
+				  
+                </div>
+            </div>
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+				
+					var time = null;
+					function setTimer() {
+						timer=setInterval(function() {	
+							plusSlides(1) ; } , 5000) ;
+						}
+						setTimer();
+				
+            </script>
+        </div>
     </body>
 </html>
