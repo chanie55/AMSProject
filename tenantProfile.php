@@ -11,10 +11,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
             integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> 
-            <link rel = "styelsheet" href = "css\invoice.css">
+            <link rel = "styelsheet" href = "css\tenantProfile.css">
         <style>
             <?php
-                include "CSS/invoice.css"
+                include "CSS/tenantProfile.css"
             ?>
         </style>
     </head>
@@ -84,7 +84,49 @@
                 </div>
             </nav>
 
-            
+            <div class = "table-container">
+
+            <div class="search_wrap search_wrap_1">
+                    <div class="search_box">
+                        <input type="text" class="input" placeholder="Search....">
+                        <div class="btn btn_common">
+                            <i class="fas fa-search" style="font-size:20px"></i>
+                        </div>
+                    </div>
+                </div>
+                            
+                <a href="#" class = "btn btn-add mb-5"> 
+                    <i class="fa fa-user-plus"style="font-size:23px;float:left"></i> Add New 
+                </a>
+
+                <div class = "table-border">
+                <table class = "table text-center">
+                    <thread>
+                        <tr class = "table-header">
+                            <th scope = "col"> Name</th>
+                            <th scope = "col"> Contact No. </th>
+                            <th scope = "col"> Address </th>
+                            <th scope = "col"> Action </th>
+                        </tr> 
+                    </thread>
+                    <tbody> 
+                        <tr class = "data-row"> 
+                        <td scope = "row"> Khytryn Faye Carcillar </td>
+                            <td> 09123456789 </td>
+                            <td> D.Lotilla, Isulan, Sultan, Kudarat </td>
+                            <td>
+                                <a href = "#" class = "action-icon link-dark">
+                                    <i class = "fa-solid fa-pen-to-square fs-5 me-3"> </i>
+                                </a>
+                                <a href = "#" class = "action-icon link-dark">
+                                    <i class = "fa-solid fa-trash fs-5"></i>
+                                </a> 
+                            </td>
+                        </tr>
+                    </tbody> 
+                </table>
+                </div>
+            </div>
         </div>
     </div>
         

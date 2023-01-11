@@ -16,13 +16,11 @@
             <h3>
                 Apartment Management System
             </h3>
-            <button id = "show-login" class = "btnLogin"> LOGIN </button>
         </header>
 
     
     <!-- LOGIN FORM -->
         <div class = "form">
-            <label class="close" title="close">&times;</label>
             
             <form id = "form1" name = "formlogin" method = "POST" action="login.php">
                 <h4>Login</h4>
@@ -44,7 +42,7 @@
                 <button type="submit" id = "pop" class= "loginbtn" name = "login-submit">Login</button>
             </form>
         </div> 
-        
+    
         <script defer scr = "validation.js"> 
             document.querySelector("#show-login").addEventListener("click", function() {
                 document.querySelector(".form").classList.add("active"); 
@@ -55,7 +53,5 @@
             })
         </script> 
         
-      
-
     </body>
 </html>

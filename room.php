@@ -10,8 +10,10 @@
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
             integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> 
-            <link rel = "styelsheet" href = "css\room.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> 
+         <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+        <link rel = "styelsheet" href = "css\room.css">
         <style>
             <?php
                 include "CSS/room.css"
@@ -84,9 +86,59 @@
                 </div>
             </nav>
 
-            
+            <div class = "table-container">
+
+            <div class="search_wrap search_wrap_1">
+                    <div class="search_box">
+                        <input type="text" class="input" placeholder="Search....">
+                        <div class="btn btn_common">
+                            <i class="fas fa-search" style="font-size:20px"></i>
+                        </div>
+                    </div>
+                </div>
+                            
+                <a href="#" class = "btn btn-add mb-5"> 
+                    <i class="fa fa-user-plus"style="font-size:23px;float:left"></i> Add New 
+                </a>
+
+                <div class = "table-border">
+                <table class = "table text-center">
+                    <thread>
+                        <tr class = "table-header">
+                            <th scope = "col"> Room No.</th>
+                            <th scope = "col"> Bed No. </th>
+                            <th scope = "col"> Daily Rate </th>
+                            <th scope = "col"> Monthly Rate </th>
+                            <th scope = "col"> Status </th>
+                            <th scope = "col"> Action </th>
+                        </tr> 
+                    </thread>
+                    <tbody> 
+                        <tr class = "data-row"> 
+                        <td scope = "row"> Room 4 </td>
+                            <td> 1 </td>
+                            <td> 0 </td>
+                            <td> 3, 500 </td>
+                            <td> Active </td>
+                            <td>
+                                <a href = "#" class = "action-icon link-dark">
+                                    <i class = "fa-solid fa-pen-to-square fs-5 me-3"> </i>
+                                </a>
+                                <a href = "#" class = "action-icon link-dark">
+                                    <i class = "fa-solid fa-trash fs-5"></i>
+                                </a> 
+                            </td>
+                        </tr>
+                    </tbody> 
+                </table>
+                </div>
+            </div>
         </div>
+
+        
     </div>
+
+    
         
     </body>
 </html>

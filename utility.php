@@ -84,7 +84,47 @@
                 </div>
             </nav>
 
-            
+            <div class = "table-container">
+
+            <div class="search_wrap search_wrap_1">
+                    <div class="search_box">
+                        <input type="text" class="input" placeholder="Search....">
+                        <div class="btn btn_common">
+                            <i class="fas fa-search" style="font-size:20px"></i>
+                        </div>
+                    </div>
+                </div>
+                            
+                <a href="#" class = "btn btn-add mb-5"> 
+                    <i class="fa fa-user-plus"style="font-size:23px;float:left"></i> Add New 
+                </a>
+
+                <div class = "table-border">
+                <table class = "table text-center">
+                    <thread>
+                        <tr class = "table-header">
+                            <th scope = "col"> Bills</th>
+                            <th scope = "col"> Rate </th>
+                            <th scope = "col"> Action </th>
+                        </tr> 
+                    </thread>
+                    <tbody> 
+                        <tr class = "data-row"> 
+                        <td scope = "row"> .. </td>
+                            <td> .. </td>
+                            <td>
+                                <a href = "#" class = "action-icon link-dark">
+                                    <i class = "fa-solid fa-pen-to-square fs-5 me-3"> </i>
+                                </a>
+                                <a href = "#" class = "action-icon link-dark">
+                                    <i class = "fa-solid fa-trash fs-5"></i>
+                                </a> 
+                            </td>
+                        </tr>
+                    </tbody> 
+                </table>
+                </div>
+            </div>
         </div>
     </div>
         
