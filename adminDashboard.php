@@ -7,106 +7,125 @@ session_start();
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel = "stylesheet" href = "css\aDashboard.css"/>
-
+        <meta charset = "UTF-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> 
+            <link rel = "styelsheet" href = "css\aDashboard.css">
         <style>
             <?php
                 include "CSS/aDashboard.css"
             ?>
         </style>
-
     </head>
     <body>
-        <header>
-            <h3>
-                Apartment Management System
-            </h3>
 
-              <a> <img src="photos\header.png"> </a>
-        </header>
+    <div class = "d-flex" id = "wrapper">
 
-        <section class="body">
+            <!--sidebar-->
+            <div id = "sidebar-wrapper">
 
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#" class="logo">
-                            <img src="photos\menuu.png" alt="">
-                            <span class="nav-item">Menu</span>
-                        </a>
-                    </li>
-                    <li><a href="adminDashboard.php" class="menu">
-                        <img src="photos\home.png" alt=""> <i class="ams home"></i>
-                        
-                        <span class="nav-item">Home</span>
-                    </a> </li>
-                    <li><a href="tenantProfile.php" class="menu">
-                        <img src="photos\tenant.png" alt=""> <i class="ams profile"></i>
-                        <span class="nav-item">Tenant's Profile</span>
-                    </a> </li>
-                    <li><a href="room.php" class="menu">
-                        <img src="photos\room.png" alt=""> <i class="ams room"></i>
-                        <span class="nav-item">Room Management</span>
-                    </a> </li>
-                    <li><a href="utility.php" class="menu">
-                        <img src="photos\bill.png" alt=""> <i class="ams bills"></i>
-                        <span class="nav-item">Utility Bills</span>
-                    </a> </li>
-                    <li><a href="noticeBoard.php" class="menu">
-                        <img src="photos\notice.png" alt=""> <i class="ams board"></i>
-                        <span class="nav-item">Notice Board</span>
-                    </a> </li>
-                    <li><a href="invoice.php" class="menu">
-                        <img src="photos\invoice.png" alt=""> <i class="ams invoice"></i>
-                        <span class="nav-item">Invoice</span>
-                    </a> </li>
-                    <li><a href="paymentHistory.php" class="menu">
-                        <img src="photos\history.png" alt=""> <i class="ams history"></i>
-                        <span class="nav-item">Payment History</span>
-                    </a> </li>
-                    <li><a href="index.php" class="menu logout">
-                        <img src="photos\logout.png" alt=""> <i class="ams logout"></i>
-                        <span class="nav-item">Logout</span>
-                    </a> </li>
-                </ul>
+                <div class = "sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border = bottom">
+                    <i class = "fs-2 m-0"> </i> Welcome
+                </div>
+
+                <div class = "list-group">
+                    <a href = "adminDashboard.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-home-alt me-2"> </i> Home
+                    </a>
+                    <a href = "tenantProfile.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-user-alt me-2"> </i> Tenant's Profile
+                    </a>
+                    <a href = "room.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-door-open me-2"> </i> Room Management
+                    </a>
+                    <a href = "utility.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-money-check-dollar me-2"> </i> Utility Bills
+                    </a>
+                    <a href = "noticeBoard.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-commenting me-2"> </i> Notice Board
+                    </a>
+                    <a href = "invoice.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-file-invoice-dollar me-2"> </i> Invoice
+                    </a>
+                    <a href = "collectibles.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-dollar-sign me-2"> </i> Collectibles
+                    </a>
+                    <a href = "index.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-sign-out-alt me-2"> </i> Logout
+                    </a>
+                </div>
+            </div>
+
+        <!--end-->
+
+        <div id = "page-content-wrapper">
+            <nav class = "navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+                <div class = "d-flex align-items-center"> 
+                    <h2 class = "fs-2 m-0"> Dashboard </h2>
+                </div>
+
+                <div class = "navbar-collapse">
+                    <ul class = "navbar-nav ms-auto mb-2 mb-lg-0"> 
+                        <li class = "navbar-item-dropdown">
+                            <a href = "#" class = "nav-link dropdown-toggle second-text fw-bold" id = "navbarDropdown" role = "button"
+                                data-bs-toggle = "dropdown" aria-expanded = "false">
+                                <i class = "fas fa-user me-2"></i> User 
+                            </a> 
+                            <ul class = "dropdown-menu" aria-labelledby = "navbarDropdown">
+                                <li> <a href = "#" class = "dropdown-item"> Profile </a></li>
+                                <li> <a href = "#" class = "dropdown-item"> Logout </a></li> 
+                            </ul>
+
+                        </li>
+
+                    </ul> 
+
+                </div>
             </nav>
- 
-    <!-- 3 notification buttons basta ana  -->
-            <section class="section-body">
-                <h2> Dashboard </h2>
-                <div class="flex-container">
-                    <div class="card tenant">
-                        <img src="photos\tenants.png" alt="tenant"> 
-                    
-                        <div class="text tenants">
-                        <p>No. of Tenants</p>
-                        <p class="value">0</p>
 
-                    </div> 
+            <div class = "container-fluid px-4">
+
+                <div class = "row g-3 my-2">
+                    <div class = "col-md-4">
+                        <div class = "p-3 bg-white border = 2 shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div> 
+                                <h3 class = "fs-2"> 25</h3>
+                                <p class = "fs-5 box"> No. of Tenants </p>
+                            </div> 
+                            <i class = "fas fa-user fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                        </div>
                     </div>
 
-                    <div class="card roomNo">
-                        <img src="photos\number of room.png" alt="room">
-                        
-                        <div class="text rooms">
-                            <p>No. of Rooms</p> 
-                            <p class="value">0</p>
-                        </div> 
+                    <div class = "col-md-4">
+                        <div class = "p-3 bg-white border = 2 shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div> 
+                                <h3 class = "fs-2"> 20</h3>
+                                <p class = "fs-5 box"> No. of Rooms </p>
+                            </div> 
+                            <i class = "fas fa-door-open fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                        </div>
                     </div>
 
-                    <div class="card bed">
-                        <img src="photos\beds.png" alt="beds">
-                        
-                        <div class="text beds">
-                            <p>No. of Beds</p>
-                            
-                            <p class="value">0</p>
-                        </div> 
+                    <div class = "col-md-4">
+                        <div class = "p-3 bg-white border = 2 shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div> 
+                                <h3 class = "fs-2"> 26</h3>
+                                <p class = "fs-5 box"> No. of Beds </p>
+                            </div> 
+                            <i class = "fas fa-bed fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                        </div>
                     </div>
                 </div>
-            </section>
-            
-            
-        </section>
+            </div>
+        </div>
+    </div>
+        
     </body>
 </html>

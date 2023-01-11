@@ -114,15 +114,13 @@
                 <div id = "pass-error"> Password is required </div>
                 <br>
                 <a href="#">Forgot Password?</a>
-                <button type="submit" class= "loginbtn" name = "login-submit">Login</button>
+                <button type="submit" id = "pop" class= "loginbtn" name = "login-submit">Login</button>
             </form>
         </div> 
         
         <script defer scr = "validation.js"> 
             document.querySelector("#show-login").addEventListener("click", function() {
-                document.querySelector(".form").classList.add("active");
-
-                
+                document.querySelector(".form").classList.add("active"); 
             })
 
             document.querySelector(".form .close").addEventListener("click", function() {
