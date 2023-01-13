@@ -57,9 +57,6 @@ session_start();
                     <a href = "collectibles.php" class = "list-group-item second-text active">
                         <i class = "fas fa-dollar-sign me-2"> </i> Collectibles
                     </a>
-                    <a href = "index.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-sign-out-alt me-2"> </i> Logout
-                    </a>
                 </div>
             </div>
 
@@ -80,7 +77,7 @@ session_start();
                             </a> 
                             <ul class = "dropdown-menu" aria-labelledby = "navbarDropdown">
                                 <li> <a href = "#" class = "dropdown-item"> Profile </a></li>
-                                <li> <a href = "#" class = "dropdown-item"> Logout </a></li> 
+                                <li> <a href = "index.php" class = "dropdown-item"> Logout </a></li> 
                             </ul>
 
                         </li>

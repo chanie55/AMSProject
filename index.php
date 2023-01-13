@@ -12,10 +12,10 @@
 	<img class="wave" src="photos/wave.png">
 	<div class="container">
 		<div class="img">
-			<img src="photos/img.svg">
+			
 	    </div>
 		<div class="login-container">
-			<form action="index.php">
+			<form action="login.php">
 				<img class="avatar" src="photos/avatar.svg">
 				<h2>Welcome</h2>
            		<div class="input-div one ">

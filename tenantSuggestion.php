@@ -1,3 +1,9 @@
+
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,10 +17,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
             integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> 
-            <link rel = "styelsheet" href = "css\invoice.css">
+            <link rel = "styelsheet" href = "css\tenantSuggestion.css">
         <style>
             <?php
-                include "CSS/invoice.css"
+                include "CSS/tenantSuggestion.css"
             ?>
         </style>
     </head>
@@ -30,26 +36,20 @@
                 </div>
 
                 <div class = "list-group">
-                    <a href = "adminDashboard.php" class = "list-group-item second-text active">
+                    <a href = "tenantDashboard.php" class = "list-group-item second-text active">
                         <i class = "fas fa-home-alt me-2"> </i> Home
                     </a>
-                    <a href = "tenantProfile.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-user-alt me-2"> </i> Tenant's Profile
+                    <a href = "tenantNotice.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-warning me-2"> </i> Notice
                     </a>
-                    <a href = "room.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-door-open me-2"> </i> Room Management
+                    <a href = "tenantPayment.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-money-check-dollar me-2"> </i> Payment Transaction
                     </a>
-                    <a href = "utility.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-money-check-dollar me-2"> </i> Utility Bills
+                    <a href = "tenantHistory.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-receipt me-2"> </i> Payment History
                     </a>
-                    <a href = "noticeBoard.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-commenting me-2"> </i> Notice Board
-                    </a>
-                    <a href = "invoice.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-file-invoice-dollar me-2"> </i> Invoice
-                    </a>
-                    <a href = "collectibles.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-dollar-sign me-2"> </i> Collectibles
+                    <a href = "tenantSuggestion.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-commenting me-2"> </i> Suggestion
                     </a>
                 </div>
             </div>
@@ -59,7 +59,7 @@
         <div id = "page-content-wrapper">
             <nav class = "navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                 <div class = "d-flex align-items-center"> 
-                    <h2 class = "fs-2 m-0"> Invoice </h2>
+                    <h2 class = "fs-2 m-0"> Suggestion </h2>
                 </div>
 
                 <div class = "navbar-collapse">
@@ -80,8 +80,6 @@
 
                 </div>
             </nav>
-
-            
         </div>
     </div>
         

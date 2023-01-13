@@ -1,3 +1,9 @@
+
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,10 +17,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
             integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> 
-            <link rel = "styelsheet" href = "css\utility.css">
+            <link rel = "styelsheet" href = "css\tenantDashboard.css">
         <style>
             <?php
-                include "CSS/utility.css"
+                include "CSS/tenantDashboard.css"
             ?>
         </style>
     </head>
@@ -30,26 +36,20 @@
                 </div>
 
                 <div class = "list-group">
-                    <a href = "adminDashboard.php" class = "list-group-item second-text active">
+                    <a href = "tenantDashboard.php" class = "list-group-item second-text active">
                         <i class = "fas fa-home-alt me-2"> </i> Home
                     </a>
-                    <a href = "tenantProfile.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-user-alt me-2"> </i> Tenant's Profile
+                    <a href = "tenantNotice.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-warning me-2"> </i> Notice
                     </a>
-                    <a href = "room.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-door-open me-2"> </i> Room Management
+                    <a href = "tenantPayment.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-money-check-dollar me-2"> </i> Payment Transaction
                     </a>
-                    <a href = "utility.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-money-check-dollar me-2"> </i> Utility Bills
+                    <a href = "tenantHistory.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-receipt me-2"> </i> Payment History
                     </a>
-                    <a href = "noticeBoard.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-commenting me-2"> </i> Notice Board
-                    </a>
-                    <a href = "invoice.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-file-invoice-dollar me-2"> </i> Invoice
-                    </a>
-                    <a href = "collectibles.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-dollar-sign me-2"> </i> Collectibles
+                    <a href = "tenantSuggestion.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-commenting me-2"> </i> Suggestion
                     </a>
                 </div>
             </div>
@@ -59,7 +59,7 @@
         <div id = "page-content-wrapper">
             <nav class = "navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                 <div class = "d-flex align-items-center"> 
-                    <h2 class = "fs-2 m-0"> Utility Bills </h2>
+                    <h2 class = "fs-2 m-0"> Dashboard </h2>
                 </div>
 
                 <div class = "navbar-collapse">
@@ -81,45 +81,28 @@
                 </div>
             </nav>
 
-            <div class = "table-container">
+            <div class = "container-fluid px-4">
 
-            <div class="search_wrap search_wrap_1">
-                    <div class="search_box">
-                        <input type="text" class="input" placeholder="Search....">
-                        <div class="btn btn_common">
-                            <i class="fas fa-search" style="font-size:20px"></i>
+                <div class = "row g-3 my-2 ">
+                    <div class = "col-md-4 box-width">
+                        <div class = "p-3 bg-white border = 2 shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div> 
+                                <h3 class = "fs-2"> 2500</h3>
+                                <p class = "fs-5 box"> Balance </p>
+                            </div> 
+                            <i class = "fas fa-coins fs-1 primary-text border rounded-full secondary-bg p-3"></i>
                         </div>
                     </div>
-                </div>
-                            
-                <a href="#" class = "btn btn-add mb-5"> 
-                    <i class="fa fa-user-plus"style="font-size:23px;float:left"></i> Add New 
-                </a>
 
-                <div class = "table-border">
-                <table class = "table text-center">
-                    <thread>
-                        <tr class = "table-header">
-                            <th scope = "col"> Bills</th>
-                            <th scope = "col"> Rate </th>
-                            <th scope = "col"> Action </th>
-                        </tr> 
-                    </thread>
-                    <tbody> 
-                        <tr class = "data-row"> 
-                        <td scope = "row"> .. </td>
-                            <td> .. </td>
-                            <td>
-                                <a href = "#" class = "action-icon link-dark">
-                                    <i class = "fa-solid fa-pen-to-square fs-5 me-3"> </i>
-                                </a>
-                                <a href = "#" class = "action-icon link-dark">
-                                    <i class = "fa-solid fa-trash fs-5"></i>
-                                </a> 
-                            </td>
-                        </tr>
-                    </tbody> 
-                </table>
+                    <div class = "col-md-4 box-width">
+                        <div class = "p-3 bg-white border = 2 shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div> 
+                                <h3 class = "fs-2"> 20000</h3>
+                                <p class = "fs-5 box"> Payments </p>
+                            </div> 
+                            <i class = "fas fa-money-check fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
