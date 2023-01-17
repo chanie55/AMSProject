@@ -92,7 +92,7 @@
                     </div>
                 </div>
                             
-                <a href="#" class = "btn btn-add mb-5"> 
+                <a href="signup.php" class = "btn btn-add mb-5"> 
                     <i class="fa fa-user-plus"style="font-size:23px;float:left"></i> Add New 
                 </a>
 
@@ -113,7 +113,7 @@
                             <td> D.Lotilla, Isulan, Sultan, Kudarat </td>
                             <td>
                                 <a href = "#" class = "action-icon link-dark">
-                                    <i class = "fa-solid fa-pen-to-square fs-5 me-3"> </i>
+                                    <i class = "fa-solid fa-eye fs-5 me-3"> </i>
                                 </a>
                                 <a href = "#" class = "action-icon link-dark">
                                     <i class = "fa-solid fa-trash fs-5"></i>

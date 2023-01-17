@@ -77,7 +77,7 @@ session_start();
                             </a> 
                             <ul class = "dropdown-menu" aria-labelledby = "navbarDropdown">
                                 <li> <a href = "#" class = "dropdown-item"> Profile </a></li>
-                                <li> <a href = "index.php" class = "dropdown-item"> Logout </a></li> 
+                                <li> <a href = "#" id = "logout-btn" class = "dropdown-item"> Logout </a></li> 
                             </ul>
 
                         </li>
@@ -86,6 +86,9 @@ session_start();
 
                 </div>
             </nav>
+
+
+
 
             <div class = "container-fluid px-4">
 
@@ -124,5 +127,24 @@ session_start();
         </div>
     </div>
         
+    <div class="overlay">
+  <div class="popup">
+    <p>Are you sure you want to log out?</p>
+    <div class="text-right">
+      <button class="btn btn-cancel" onclick="location.href='adminDashboard.php'">Cancel</button>
+      <button class="btn btn-primary" onclick="location.href='index.php'">Yes</button>
+    </div>
+  </div>
+</div>
+
+<script>
+    document.querySelector("#logout-btn").addEventListener("click", function() {
+        document.querySelector(".popup .overlay").classList.add("active");
+    });
+
+    document.querySelector(".popup .btn-cancel").addEventListener("click", function() {
+        document.querySelector(".popup .overlay").classList.remove("active");
+    });
+</script>
     </body>
 </html>

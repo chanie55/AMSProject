@@ -100,7 +100,9 @@
                 <table class = "table text-center">
                     <thread>
                         <tr class = "table-header">
-                            <th scope = "col"> Bills</th>
+                            <th scope = "col"> Name </th>
+                            <th scope = "col"> Water </th>
+                            <th scope = "col"> Electricity </th>
                             <th scope = "col"> Rate </th>
                             <th scope = "col"> Action </th>
                         </tr> 
@@ -108,6 +110,8 @@
                     <tbody> 
                         <tr class = "data-row"> 
                         <td scope = "row"> .. </td>
+                            <td> .. </td>
+                            <td> .. </td>
                             <td> .. </td>
                             <td>
                                 <a href = "#" class = "action-icon link-dark">
