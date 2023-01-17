@@ -1,0 +1,12 @@
+.body {
+    margin-bottom: #009d63;
+    text-emphasis-color: #009d63;
+    border-left-color: #bbbec5;
+    scrollbar-color: #c1efde;
+}
+
+.button{
+    background-color:#009d63;
+    margin: 10x;
+    padding: 5px;
+}
