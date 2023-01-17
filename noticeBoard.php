@@ -22,6 +22,8 @@
 
     <div class = "d-flex" id = "wrapper">
 
+    
+
             <!--sidebar-->
             <div id = "sidebar-wrapper">
 
@@ -53,8 +55,10 @@
                     </a>
                 </div>
             </div>
+            
 
         <!--end-->
+       
 
         <div id = "page-content-wrapper">
             <nav class = "navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
@@ -66,7 +70,7 @@
                     <ul class = "navbar-nav ms-auto mb-2 mb-lg-0"> 
                         <li class = "navbar-item-dropdown">
                             <a href = "#" class = "nav-link dropdown-toggle second-text fw-bold" id = "navbarDropdown" role = "button"
-                                data-bs-toggle = "dropdown" aria-expanded = "false">
+                                data-bs-toggle = "dropdown" aria-expanded = "true">
                                 <i class = "fas fa-user me-2"></i> User 
                             </a> 
                             <ul class = "dropdown-menu" aria-labelledby = "navbarDropdown">
@@ -79,11 +83,38 @@
                     </ul> 
 
                 </div>
-            </nav>
+            </nav>  
+                       <!--Notice Board-->
 
+         <div class="myDiv">
+
+            <form>
+            <div class ="label">   
+            <label for="fname">Name:&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            </div>
+
+            <div class ="label"> 
+            <label for="lname">Date:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <input type="text" id="fdate" name="fdate"><br><br>
+            </div>
+
+            <div class ="label"> 
+            <label for="ftitle">Title:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <input type="text" id="ftitle" name="ftitle"><br><br>
+            </div>
+
+            <div class="label">
+            <label for="lname">Content:</label>
+            <textarea id="fcontent" name="fcontent" rows="4" cols="50"></textarea>
+            </div>
+            <input type="submit" value="Submit" float = right;> 
+
+            </form>
             
+                </div>         
         </div>
     </div>
-        
+         
     </body>
 </html>

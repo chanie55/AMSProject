@@ -102,9 +102,9 @@
                 <table class = "table text-center">
                     <thread>
                         <tr class = "table-header">
-                            <th scope = "col"> Room No.</th>
+                            <th scope = "col"> Name </th>
+                            <th scope = "col"> Room No. </th>
                             <th scope = "col"> Bed No. </th>
-                            <th scope = "col"> Daily Rate </th>
                             <th scope = "col"> Monthly Rate </th>
                             <th scope = "col"> Status </th>
                             <th scope = "col"> Action </th>
@@ -112,9 +112,9 @@
                     </thread>
                     <tbody> 
                         <tr class = "data-row"> 
-                        <td scope = "row"> Room 4 </td>
+                        <td scope = "row"> Julie </td>
                             <td> 1 </td>
-                            <td> 0 </td>
+                            <td> 1 </td>
                             <td> 3, 500 </td>
                             <td> Active </td>
                             <td>
