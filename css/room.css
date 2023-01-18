@@ -157,3 +157,80 @@
 .action-icon {
     color: #0ba310;
 }
+
+.popup {
+    display: none;
+    width: 33.333333%;
+    padding: 15px;
+    left: 0;
+    margin-left: 33.333333%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+    position: absolute;
+    top: 15%;
+    box-shadow: 5px 5px 5px #000;
+    z-index: 10001;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.10);
+    z-index: 10000;
+  }
+
+  .popup1{
+    visibility: hidden;
+    width: 33.333333%;
+    padding: 15px;
+    left: 0;
+    margin-left: 33.333333%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+    position: absolute;
+    top: 15%;
+    box-shadow: 5px 5px 5px #000;
+    z-index: 10001;
+  }
+
+  .overlay1 {
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.10);
+    z-index: 10000;
+  }
+
+.btn-primary {
+    float: right;
+    background-color: #0ba310;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #29bb2e;
+}
+
+.cancel {
+    border: 1px solid black;
+}
+
+.formHeader {
+    text-align: center;
+    font-size: 16px;
+}
+
+.combo-status {
+    margin-top: 5%;
+}

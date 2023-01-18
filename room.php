@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> 
          <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+        <link rel = "styelsheet" href = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+        <link rel = "styelsheet" href = "https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
         <link rel = "styelsheet" href = "css\room.css">
         <style>
             <?php
@@ -69,11 +71,11 @@
                         <li class = "navbar-item-dropdown">
                             <a href = "#" class = "nav-link dropdown-toggle second-text fw-bold" id = "navbarDropdown" role = "button"
                                 data-bs-toggle = "dropdown" aria-expanded = "false">
-                                <i class = "fas fa-user me-2"></i> User 
+                                <i class = "fas fa-user me-2"></i> Admin 
                             </a> 
                             <ul class = "dropdown-menu" aria-labelledby = "navbarDropdown">
                                 <li> <a href = "#" class = "dropdown-item"> Profile </a></li>
-                                <li> <a href = "index.php" class = "dropdown-item"> Logout </a></li> 
+                                <li> <a href = "#" class = "dropdown-item" onclick = "openForm()"> Logout </a></li> 
                             </ul>
 
                         </li>
@@ -94,17 +96,17 @@
                     </div>
                 </div>
                             
-                <a href="#" class = "btn btn-add mb-5"> 
-                    <i class="fa fa-user-plus"style="font-size:23px;float:left"></i> Add New 
+                <a href="#" class = "btn btn-add mb-5" onclick = "openAdd()"> 
+                    <i class="fa fa-user-plus"style="font-size:23px;float:left" ></i> Add New 
                 </a>
 
                 <div class = "table-border">
-                <table class = "table text-center">
+                <table id = "example" class = "table table-striped text-center">
                     <thread>
                         <tr class = "table-header">
-                            <th scope = "col"> Room No.</th>
+                            <th scope = "col"> Name </th>
+                            <th scope = "col"> Room No. </th>
                             <th scope = "col"> Bed No. </th>
-                            <th scope = "col"> Daily Rate </th>
                             <th scope = "col"> Monthly Rate </th>
                             <th scope = "col"> Status </th>
                             <th scope = "col"> Action </th>
@@ -112,13 +114,13 @@
                     </thread>
                     <tbody> 
                         <tr class = "data-row"> 
-                        <td scope = "row"> Room 4 </td>
+                        <td scope = "row"> Julie </td>
                             <td> 1 </td>
-                            <td> 0 </td>
+                            <td> 1 </td>
                             <td> 3, 500 </td>
                             <td> Active </td>
                             <td>
-                                <a href = "#" class = "action-icon link-dark">
+                                <a href = "#" class = "action-icon link-dark" onclick = "openAdd()">
                                     <i class = "fa-solid fa-pen-to-square fs-5 me-3"> </i>
                                 </a>
                                 <a href = "#" class = "action-icon link-dark">
@@ -135,7 +137,84 @@
         
     </div>
 
-    
+    <div class="overlay" id = "popup-msg">
+        <div class="popup" id = "popup">
+            <p>Are you sure you want to log out?</p>
+            <div class="text-right">
+                <button class="btn btn-cancel" onclick="closeForm()">Cancel</button>
+                <button class="btn btn-primary" onclick="location.href='index.php'">Yes</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay1" id = "openAdd">
+        <div class="popup1" id = "popupAdd">
+            <p class = "formHeader">Add Room Details</p>
+            <form method="post" id="contactFrm">
+                <div class="modal-body">
+                    <div class="response"></div>
+                    <div class="form-group">
+                        <label>Name:</label>
+                        <input type="text" name="username" id="username" class="form-control" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Room No.:</label>
+                        <input type="text" name="firstname" id="firstname" class="form-control" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Bed No.:</label>
+                        <input type="text" name="lastname" id="lastname" class="form-control" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Monthly Rate:</label>
+                        <input type="password" name="password" id="password" class="form-control" required="">
+                    </div> <br>
+                    <div class="form-group">
+                        <label for = "status">Status:</label>
+                        <select name = "status" id = "status"> 
+                            <option class = "combo-status" value = "Active"> Active </option>
+                            <option class = "combo-status" value = "Inactive"> Inactive </option>
+                        </select>
+                    </div>
+                    <br>
+                    </form>
+            <div class="text-right">
+                <button class="btn btn-cancel cancel" onclick="closeAdd()">Cancel</button>
+                <button class="btn btn-primary" onclick="">Add</button>
+            </div>
+        </div>
+    </div>
+
+        <script scr = "https://code.jquery.com/jquery-3.5.1.js"> </script>
+        <script scr = "https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"> </script>
+        <script scr = "https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"> </script>
+
+<script>
+    function openForm() {
+    document.getElementById("popup-msg").style.display = "block";
+    document.getElementById("popup").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("popup-msg").style.display = "none";
+        document.getElementById("popup").style.display = "none";
+    }
+
+    function openAdd() {
+    document.getElementById("openAdd").style.visibility = "visible";
+    document.getElementById("popupAdd").style.visibility = "visible";
+    }
+
+    function closeAdd() {
+        document.getElementById("openAdd").style.visibility = "hidden";
+    document.getElementById("popupAdd").style.visibility = "hidden";
+    }
+
+
+    $(document).ready(function () {
+    $('#example').DataTable();
+});
+</script>
         
     </body>
 </html>
