@@ -21,9 +21,6 @@
     <body>
 
     <div class = "d-flex" id = "wrapper">
-
-    
-
             <!--sidebar-->
             <div id = "sidebar-wrapper">
 
@@ -84,10 +81,74 @@
 
                 </div>
             </nav>  
+
+           <!-- Button trigger modal -->
+          <button type="button" class="btn btn-add mb-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <i class="fa fa-pen-to-square" style="font-size:20px;float:left;" ></i>New Post 
+          </button>
+        
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    
+  
+  <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+      <form>
+            <div class ="label">   
+            <label for="fname">Name:&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            </div>
+
+            <div class="label">
+            <label for="Date">Date:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <input type="date" id="date" name="date">
+            </div>
+  
+            <div class ="label"> 
+            <label for="ftitle">Title:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <input type="text" id="ftitle" name="ftitle"><br><br>
+            </div>
+
+            <div class="label">
+            <label for="lname">Content:</label>
+            <textarea id="fcontent" name="fcontent" rows="4" cols="50"></textarea>
+            </div>
+           
+
+            </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Post</button>
+      </div>
+
+     <!-- <div class="modal-footer">
+        <form method="POST" class="btn btn-secondary" data-bs-dismiss="modal" action="noticeBoard.php"> </form>
+      </div> -->
+    </div>
+  </div>
+</div>
+ 
+
+
+
+        <script>
+            function openForm() {
+                document.getElementById("modal").style.display = "block";
+            }
+
+            function closeForm(){
+                document.getElementById("modal").style.display = "none";
+            }
+        </script>
                        <!--Notice Board-->
-
-         <div class="myDiv">
-
+        <!--
+            <div class="myDiv">
             <form>
             <div class ="label">   
             <label for="fname">Name:&nbsp&nbsp&nbsp&nbsp&nbsp</label>
@@ -108,13 +169,73 @@
             <label for="lname">Content:</label>
             <textarea id="fcontent" name="fcontent" rows="4" cols="50"></textarea>
             </div>
-            <input type="submit" value="Submit" float = right;> 
+            <input type="post" value="Post" float = right;> 
 
-            </form>
-            
-                </div>         
+            </form> -->
+            <style>
+                .col{
+                    padding: 20px;
+                    display: flex;
+                    column-gap: 10px;
+                    row-gap: 10px;
+                    flex-wrap: wrap;
+                }
+                .cont{
+                    background: #ddd;
+                    padding: 20px;
+                    width: 300px;
+                    height: 200px;
+                    border-radius: 10px;
+                    box-shadow: 1px 1px 3px 0px black;
+                }
+                .cont2{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                }
+            </style>
+            <div class="col">
+                <div class="cont">
+                    <div class="cont2">
+                        <div class="name">
+                            Mica
+                        </div>
+                        <div class="date" style="text-align: right;">
+                            2023, 01, 15
+                        </div>
+                    </div><br>
+                    <div>
+                        Notes:
+                        <p>sss</p>
+                    </div>
+                </div>
+                
+                <div class="cont">
+                    <div class="cont2">
+                        <div class="name">
+                            Mica
+                        </div>
+                        <div class="date" style="text-align: right;">
+                            2023, 01, 15
+                        </div>
+                    </div><br>
+                    <div>
+                        Notes:
+                        <p>sss</p>
+                    </div>
+                </div>
+                
+            </div>
+
+
+            </div>
+
+
+                </div>   
+                      
         </div>
+        
     </div>
+
          
     </body>
 </html>
