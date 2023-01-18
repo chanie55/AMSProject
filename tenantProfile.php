@@ -93,7 +93,7 @@
                 </div>
                             
                 <a href="#" class = "btn btn-add mb-5" id = "modal-button" onclick = "openAdd()"> 
-                    <i class="fa fa-user-plus"style="font-size:23px;float:left"></i> Add New 
+                    <i class="fa fa-user-plus" style="font-size:23px;float:left"></i> Add New 
                 </a>
 
                 <div class = "table-border">
@@ -141,7 +141,7 @@
 
     <div class="overlay1" id = "openAdd">
         <div class="popup1" id = "popupAdd">
-            <p>Add Tenant</p>
+            <p class = "formHeader">Add New Tenant</p>
             <form method="post" id="contactFrm">
                 <div class="modal-body">
                     <div class="response"></div>
@@ -158,7 +158,7 @@
                         <input type="text" name="lastname" id="lastname" class="form-control" required="">
                     </div>
                     <div class="form-group">
-                        <label>password</label>
+                        <label>Password:</label>
                         <input type="password" name="password" id="password" class="form-control" required="">
                     </div>
                     <div class="form-group">
@@ -168,7 +168,7 @@
                     <br>
                     </form>
             <div class="text-right">
-                <button class="btn btn-cancel" onclick="closeAdd()">Cancel</button>
+                <button class="btn btn-cancel cancel" onclick="closeAdd()">Cancel</button>
                 <button class="btn btn-primary" onclick="">Add</button>
             </div>
         </div>
