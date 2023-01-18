@@ -67,11 +67,11 @@ session_start();
                         <li class = "navbar-item-dropdown">
                             <a href = "#" class = "nav-link dropdown-toggle second-text fw-bold" id = "navbarDropdown" role = "button"
                                 data-bs-toggle = "dropdown" aria-expanded = "false">
-                                <i class = "fas fa-user me-2"></i> User 
+                                <i class = "fas fa-user me-2"></i> Tenant 
                             </a> 
                             <ul class = "dropdown-menu" aria-labelledby = "navbarDropdown">
                                 <li> <a href = "#" class = "dropdown-item"> Profile </a></li>
-                                <li> <a href = "index.php" class = "dropdown-item"> Logout </a></li> 
+                                <li> <a href = "#" class = "dropdown-item" onclick = "openForm()"> Logout </a></li> 
                             </ul>
 
                         </li>
@@ -83,5 +83,26 @@ session_start();
         </div>
     </div>
         
+    <div class="overlay" id = "popup-msg">
+        <div class="popup" id = "popup">
+            <p>Are you sure you want to log out?</p>
+            <div class="text-right">
+                <button class="btn btn-cancel" onclick="closeForm()">Cancel</button>
+                <button class="btn btn-primary" onclick="location.href='index.php'">Yes</button>
+            </div>
+        </div>
+    </div>
+
+<script>
+    function openForm() {
+    document.getElementById("popup-msg").style.display = "block";
+    document.getElementById("popup").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("popup-msg").style.display = "none";
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
     </body>
 </html>

@@ -67,11 +67,11 @@
                         <li class = "navbar-item-dropdown">
                             <a href = "#" class = "nav-link dropdown-toggle second-text fw-bold" id = "navbarDropdown" role = "button"
                                 data-bs-toggle = "dropdown" aria-expanded = "false">
-                                <i class = "fas fa-user me-2"></i> User 
+                                <i class = "fas fa-user me-2"></i> Admin
                             </a> 
                             <ul class = "dropdown-menu" aria-labelledby = "navbarDropdown">
                                 <li> <a href = "#" class = "dropdown-item"> Profile </a></li>
-                                <li> <a href = "index.php" class = "dropdown-item"> Logout </a></li> 
+                                <li> <a href = "#" class = "dropdown-item" onclick = "openForm()"> Logout </a></li> 
                             </ul>
 
                         </li>
@@ -92,7 +92,7 @@
                     </div>
                 </div>
                             
-                <a href="signup.php" class = "btn btn-add mb-5"> 
+                <a href="#" class = "btn btn-add mb-5" id = "modal-button" onclick = "openAdd()"> 
                     <i class="fa fa-user-plus"style="font-size:23px;float:left"></i> Add New 
                 </a>
 
@@ -127,5 +127,81 @@
         </div>
     </div>
         
+    <div class="overlay" id = "popup-msg">
+        <div class="popup" id = "popup">
+            <p>Are you sure you want to log out?</p>
+            <div class="text-right">
+                <button class="btn btn-cancel" onclick="closeForm()">Cancel</button>
+                <button class="btn btn-primary" onclick="location.href='index.php'">Yes</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="overlay1" id = "openAdd">
+        <div class="popup1" id = "popupAdd">
+            <p>Add Tenant</p>
+            <form method="post" id="contactFrm">
+                <div class="modal-body">
+                    <div class="response"></div>
+                    <div class="form-group">
+                        <label>Username:</label>
+                        <input type="text" name="username" id="username" class="form-control" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>First name:</label>
+                        <input type="text" name="firstname" id="firstname" class="form-control" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Last name:</label>
+                        <input type="text" name="lastname" id="lastname" class="form-control" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>password</label>
+                        <input type="password" name="password" id="password" class="form-control" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Contact Number:</label>
+                        <input type="text" name="conNum" id="conNum" class="form-control" required="">
+                    </div>
+                    <br>
+                    </form>
+            <div class="text-right">
+                <button class="btn btn-cancel" onclick="closeAdd()">Cancel</button>
+                <button class="btn btn-primary" onclick="">Add</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+    function openForm() {
+    document.getElementById("popup-msg").style.display = "block";
+    document.getElementById("popup").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("popup-msg").style.display = "none";
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+<script>
+    function openAdd() {
+    document.getElementById("openAdd").style.visibility = "visible";
+    document.getElementById("popupAdd").style.visibility = "visible";
+    }
+
+    function closeAdd() {
+        document.getElementById("openAdd").style.visibility = "hidden";
+    document.getElementById("popupAdd").style.visibility = "hidden";
+    }
+</script>
+
+
+      
+
+           
     </body>
 </html>

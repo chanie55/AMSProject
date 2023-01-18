@@ -73,11 +73,11 @@ session_start();
                         <li class = "navbar-item-dropdown">
                             <a href = "#" class = "nav-link dropdown-toggle second-text fw-bold" id = "navbarDropdown" role = "button"
                                 data-bs-toggle = "dropdown" aria-expanded = "false">
-                                <i class = "fas fa-user me-2"></i> User 
+                                <i class = "fas fa-user me-2"></i> Admin
                             </a> 
                             <ul class = "dropdown-menu" aria-labelledby = "navbarDropdown">
                                 <li> <a href = "#" class = "dropdown-item"> Profile </a></li>
-                                <li> <a href = "#" id = "logout-btn" class = "dropdown-item"> Logout </a></li> 
+                                <li> <a href = "#" id = "logout-btn" class = "dropdown-item" onclick = "openForm()"> Logout </a></li> 
                             </ul>
 
                         </li>
@@ -127,24 +127,26 @@ session_start();
         </div>
     </div>
         
-    <div class="overlay">
-  <div class="popup">
-    <p>Are you sure you want to log out?</p>
-    <div class="text-right">
-      <button class="btn btn-cancel" onclick="location.href='adminDashboard.php'">Cancel</button>
-      <button class="btn btn-primary" onclick="location.href='index.php'">Yes</button>
+    <div class="overlay" id = "popup-msg">
+        <div class="popup" id = "popup">
+            <p>Are you sure you want to log out?</p>
+            <div class="text-right">
+                <button class="btn btn-cancel" onclick="closeForm()">Cancel</button>
+                <button class="btn btn-primary" onclick="location.href='index.php'">Yes</button>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
 <script>
-    document.querySelector("#logout-btn").addEventListener("click", function() {
-        document.querySelector(".popup .overlay").classList.add("active");
-    });
+    function openForm() {
+    document.getElementById("popup-msg").style.display = "block";
+    document.getElementById("popup").style.display = "block";
+    }
 
-    document.querySelector(".popup .btn-cancel").addEventListener("click", function() {
-        document.querySelector(".popup .overlay").classList.remove("active");
-    });
+    function closeForm() {
+        document.getElementById("popup-msg").style.display = "none";
+        document.getElementById("popup").style.display = "none";
+    }
 </script>
     </body>
 </html>
