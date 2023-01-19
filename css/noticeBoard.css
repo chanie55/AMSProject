@@ -93,29 +93,53 @@
 .dropdown-item:hover {
     background-color: white;
 }
-
-
-/*Notice Board*/
-.myDiv {
-    width: 70%;
-    margin:auto;
-    margin-top: 60px;
-    margin-left: 200px;
-    margin-right:50px;
-    border: 1px outset rgb(5, 5, 5);
-    background-color: lightblue;    
-    text-align: center;
-    position: relative;
-    padding: 40px;
+.btn-add {
+    margin-top: 1%;
+    background-color: #a1f8a4;
+    margin-left: 25px;
+    font-variant: small-caps; 
+    color: #2f3031;
+}
+.post{
+    position: fixed;
 }
 
-  input[type=text] {
+
+/* MODAL*/
+/*Notice Board*/
+.parent{
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.modal-content {
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 150%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    outline: 0;
+    margin-top: 20%;
+    margin-right:10%;   
+}
+.modal-body{
+    width: 100%;
+    padding-right: 10%;
+}
+  
+input[type=text] {
     width: 80%;
     padding: 4px 10px;
     margin: 8px 0;  
   }
   textarea {
-    width: 80%;
+    width: 78%;
     height: 50%;
     padding: 20px 10px;
     margin: 8px 0;
@@ -130,13 +154,14 @@
     padding-left: 10%;
     margin: 1%;
     margin-right: 10%;
+    width: 100%;
 
   }
-   
-
-
-  input[type=submit]{
+ .modal-footer{
     width: 10%;
+<<<<<<< HEAD
+    margin-left: 79%;
+=======
     margin-left: 61%;
   }
 
@@ -165,4 +190,5 @@
     bottom: 0;
     background: rgba(0,0,0,.10);
     z-index: 10000;
+>>>>>>> aad2a0e4e780542ace93c605e47bfc97112817ab
   }
