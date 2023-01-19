@@ -111,6 +111,7 @@
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                    <tr>
+                    <th scope="col"> Name </th>
                     <th scope="col"> Water </th>
                     <th scope="col"> Electricity </th>
                     <th scope="col"> Rate </th>
