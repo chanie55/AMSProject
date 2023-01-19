@@ -1,9 +1,3 @@
-
-<?php
-session_start();
-
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,20 +10,25 @@ session_start();
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
             integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> 
-            <link rel = "styelsheet" href = "css\tenantSuggestion.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> 
+         <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+        <link rel = "styelsheet" href = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+        <link rel = "styelsheet" href = "https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
+        <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+        <link rel = "styelsheet" href = "css\stTenants.css">
+        <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        
         <style>
             <?php
-                include "CSS/tenantSuggestion.css"
+                include "CSS/stTenants.css"
             ?>
         </style>
     </head>
@@ -45,20 +44,29 @@ session_start();
                 </div>
 
                 <div class = "list-group">
-                    <a href = "tenantDashboard.php" class = "list-group-item second-text active">
+                    <a href = "adminDashboard.php" class = "list-group-item second-text active">
                         <i class = "fas fa-home-alt me-2"> </i> Home
                     </a>
-                    <a href = "tenantNotice.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-warning me-2"> </i> Notice
+                    <a href = "tenantProfile.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-user-alt me-2"> </i> Tenant's Profile
                     </a>
-                    <a href = "tenantPayment.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-money-check-dollar me-2"> </i> Payment Transaction
+                    <a href = "room.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-door-open me-2"> </i> Room Management
                     </a>
-                    <a href = "tenantHistory.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-receipt me-2"> </i> Payment History
+                    <a href = "utility.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-money-check-dollar me-2"> </i> Utility Bills
                     </a>
-                    <a href = "tenantSuggestion.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-commenting me-2"> </i> Suggestion
+                    <a href = "noticeBoard.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-commenting me-2"> </i> Notice Board
+                    </a>
+                    <a href = "sfTenants.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-commenting me-2"> </i> Suggestion From Tenants
+                    </a>
+                    <a href = "invoice.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-file-invoice-dollar me-2"> </i> Invoice
+                    </a>
+                    <a href = "collectibles.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-dollar-sign me-2"> </i> Income Reports
                     </a>
                 </div>
             </div>
@@ -68,7 +76,7 @@ session_start();
         <div id = "page-content-wrapper">
             <nav class = "navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                 <div class = "d-flex align-items-center"> 
-                    <h2 class = "fs-2 m-0"> Suggestion </h2>
+                    <h2 class = "fs-2 m-0"> Suggestion From Tenants </h2>
                 </div>
 
                 <div class = "navbar-collapse">
@@ -76,7 +84,7 @@ session_start();
                         <li class = "navbar-item-dropdown">
                             <a href = "#" class = "nav-link dropdown-toggle second-text fw-bold" id = "navbarDropdown" role = "button"
                                 data-bs-toggle = "dropdown" aria-expanded = "false">
-                                <i class = "fas fa-user me-2"></i> Tenant
+                                <i class = "fas fa-user me-2"></i> Admin 
                             </a> 
                             <ul class = "dropdown-menu" aria-labelledby = "navbarDropdown">
                                 <li> <a href = "#" class = "dropdown-item"> Profile </a></li>
@@ -89,14 +97,8 @@ session_start();
 
                 </div>
             </nav>
-             <!-- ADD NEW BUTTON --> 
-             <div class="margin">   
-            <a href="#" class = "btn btn-add mb-5" onclick = "openAdd()"> 
-                    <i class="fa fa-user-plus"style="font-size:23px;float:left" ></i> Add New 
-                </a>
-            </div>
-                
-                
+        
+
         <!-- TABLE -->
     <div class="container-xl">
         <div class="table-wrapper">
@@ -112,9 +114,10 @@ session_start();
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
+                        <th>Tenant Name</th>
                         <th>Suggestion</th>
                         <th>Date</th>
-                        <th>Reply from owner</th>
+                        <th>Reply From Owner</th>
                         <th>Status</th>
                         <th>Actions</th>
                     </tr>
@@ -123,6 +126,7 @@ session_start();
                     <tr>
                         <td>Jv Watapampa XD</td>
                         <td>420</td>
+                        <td>69</td>
                         <td>15000$</td>
                         <td>Active</td>
                         <td>
@@ -136,6 +140,7 @@ session_start();
                     <tr>
                         <td>Jv Watapampa XD</td>
                         <td>420</td>
+                        <td>69</td>
                         <td>15000$</td>
                         <td>Active</td>
                         <td>
