@@ -14,7 +14,7 @@
               <div class="d-flex flex-column align-items-center text-center p-2 py-3">
                 <img class="rounded-circle mt-0" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
                 <div class="mt-0 text-center">
-                  <button class="btn btn-primary profile-button p-1.5 mb-2" type="button" style="font-size: 11px;">Edit Icon</button>
+                  <button class="btn btn-primary profile-button p-1.5 mb-2" type="button" style="font-size: 11px;">Upload Image</button>
                 </div>
                 <span class="font-weight-bold" style="font-size: 18px;">Elmer Watapampam</span>
                 <span class="text-black-50">elmer_watapampa@gmail.com</span><span> </span>
@@ -26,18 +26,18 @@
                       <h4 class="text-right" style="color:#009d63">Profile Settings</h4>
                   </div>
                   <div class="row mt-2">
-                      <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value=""></div>
-                      <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="surname"></div>
+                      <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder=" " value=""></div>
+                      <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder=" "></div>
                   </div>
                   <div class="row mt-3">
-                      <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" value=""></div>
-                      <div class="col-md-12"><label class="labels">Address</label><input type="text" class="form-control" placeholder="enter address" value=""></div>
-                      <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value=""></div>
-                      <div class="col-md-12"><label class="labels">Occupation</label><input type="text" class="form-control" placeholder="occupation" value=""></div>
+                      <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder=" " value=""></div>
+                      <div class="col-md-12"><label class="labels">Address</label><input type="text" class="form-control" placeholder=" " value=""></div>
+                      <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder=" " value=""></div>
+                      <div class="col-md-12"><label class="labels">Occupation</label><input type="text" class="form-control" placeholder=" " value=""></div>
                   </div>
                   <div class="row mt-3">
-                      <div class="col-md-6"><label class="labels">Gender</label><input type="text" class="form-control" placeholder="gender" value=""></div>
-                      <div class="col-md-6"><label class="labels">Birthdate</label><input type="text" class="form-control" value="" placeholder="birthdate"></div>
+                      <div class="col-md-6"><label class="labels">Gender</label><input type="text" class="form-control" placeholder=" " value=""></div>
+                      <div class="col-md-6"><label class="labels">Birthdate</label><input type="text" class="form-control" value="" placeholder=" "></div>
                   </div>
                   <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
               </div>
