@@ -78,7 +78,7 @@
                                 <i class = "fas fa-user me-2"></i> Admin
                             </a> 
                             <ul class = "dropdown-menu" aria-labelledby = "navbarDropdown">
-                                <li> <a href = "#" class = "dropdown-item"> Profile </a></li>
+                                <li> <a href = "tenantProfileSettings.php" class = "dropdown-item"> Profile </a></li>
                                 <li> <a href = "#" class = "dropdown-item" onclick = "openForm()"> Logout </a></li> 
                             </ul>
 
@@ -260,6 +260,7 @@ $(document).ready(function(){
                     <div class="form-group">
                         <label>Contact Number:</label>
                         <input type="text" name="conNum" id="conNum" class="form-control" required="">
+
                     </div>
                     <br>
                     </form>
