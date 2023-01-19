@@ -18,6 +18,8 @@ session_start();
             integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> 
             <link rel = "styelsheet" href = "css\tenantSuggestion.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">  
         <style>
             <?php
                 include "CSS/tenantSuggestion.css"
@@ -80,9 +82,11 @@ session_start();
 
                 </div>
             </nav>
+            <a href="#" class = "btn btn-add mb-5" id = "modal-button" onclick = "openAdd()"> 
+                    <i class="fa fa-user-plus" style="font-size:23px;float:left"></i> Add New 
+                </a>               
         </div>
     </div>
-        
     <div class="overlay" id = "popup-msg">
         <div class="popup" id = "popup">
             <p>Are you sure you want to log out?</p>
@@ -92,6 +96,8 @@ session_start();
             </div>
         </div>
     </div>
+
+    
 
 <script>
     function openForm() {
@@ -104,5 +110,6 @@ session_start();
         document.getElementById("popup").style.display = "none";
     }
 </script>
+
     </body>
 </html>

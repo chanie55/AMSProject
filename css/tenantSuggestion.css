@@ -124,3 +124,21 @@
     background: rgba(0,0,0,.10);
     z-index: 10000;
   }
+
+  .btn-add {
+    background-color: #a1f8a4;
+    margin-left: 25px;
+    font-weight: bold;
+    color: #2f3031;
+}
+
+.btn-primary {
+    float: right;
+    background-color: #0ba310;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #29bb2e;
+}
+
