@@ -120,40 +120,16 @@
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Room No.</th>
-                        <th>Bed No.</th>
-                        <th>Monthly Rate.</th>
-                        <th>Status</th>
-                        <th>Actions</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Room No.</th>
+                        <th scope="col">Bed No.</th>
+                        <th scope="col">Monthly Rate.</th>
+                        <th scope="col">Status</th> 
+                        <th scope="col">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Jv Watapampa XD</td>
-                        <td>420</td>
-                        <td>69</td>
-                        <td>15000$</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>       
-                </tbody>
-
-                <tbody>
-                    <tr>
-                        <td>Jv Watapampa XD</td>
-                        <td>420</td>
-                        <td>69</td>
-                        <td>15000$</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>       
+                  
                 </tbody>
 
                 
@@ -197,28 +173,21 @@ $(document).ready(function(){
                     <div class="response"></div>
                     <div class="form-group">
                         <label>Name:</label>
-                        <input type="text" name="username" id="username" class="form-control" required="">
+                        <input type="text" name="name" id="name" class="form-control" required="">
                     </div>
                     <div class="form-group">
                         <label>Room No.:</label>
-                        <input type="text" name="firstname" id="firstname" class="form-control" required="">
+                        <input type="text" name="roomno" id="roomno" class="form-control" required="">
                     </div>
                     <div class="form-group">
                         <label>Bed No.:</label>
-                        <input type="text" name="lastname" id="lastname" class="form-control" required="">
+                        <input type="text" name="bedno" id="bedno" class="form-control" required="">
                     </div>
                     <div class="form-group">
                         <label>Monthly Rate:</label>
-                        <input type="text" name="mr" id="mr" class="form-control" required="">
-                    </div> <br>
-                    <div class="form-group">
-                        <label for = "status">Status:</label>
-                        <select name = "status" id = "status"> 
-                            <option class = "combo-status" value = "Active"> Active </option>
-                            <option class = "combo-status" value = "Inactive"> Inactive </option>
-                        </select>
+                        <input type="text" name="monthly" id="monthly" class="form-control" required="">
+                    </div>    
                     </div>
-                    <br>
                     </form>
             <div class="text-right">
                 <button class="btn btn-cancel cancel" onclick="closeAdd()">Cancel</button>
