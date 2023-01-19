@@ -90,10 +90,6 @@
 
                 </div>
             </nav>
-<<<<<<< HEAD
-
-=======
->>>>>>> 785f9d6f3411d24d6b66f0988002835fc3642e64
             <!-- ADD NEW BUTTON --> 
             <div class="margin">   
             <a href="#" class = "btn btn-add mb-5" onclick = "openAdd()"> 
@@ -115,33 +111,17 @@
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
-<<<<<<< HEAD
-                        <th>Name</th>
-                        <th>Room No.</th>
-                        <th>Bed No.</th>
-                        <th>Monthly Rate.</th>
-                        <th>Status</th>
-=======
                         <th>Water</th>
                         <th>Electricity</th>
                         <th>Rate</th>
->>>>>>> 785f9d6f3411d24d6b66f0988002835fc3642e64
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-<<<<<<< HEAD
-                        <td>Jv Watapampa XD</td>
-                        <td>420</td>
-                        <td>69</td>
-                        <td>15000$</td>
-                        <td>Active</td>
-=======
                         <td>1500$</td>
                         <td>42069</td>
                         <td>69</td>
->>>>>>> 785f9d6f3411d24d6b66f0988002835fc3642e64
                         <td>
                             <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
@@ -151,17 +131,9 @@
 
                 <tbody>
                     <tr>
-<<<<<<< HEAD
-                        <td>Jv Watapampa XD</td>
-                        <td>420</td>
-                        <td>69</td>
-                        <td>15000$</td>
-                        <td>Active</td>
-=======
                         <td>1500$</td>
                         <td>42069$</td>
                         <td>69</td>
->>>>>>> 785f9d6f3411d24d6b66f0988002835fc3642e64
                         <td>
                             <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
@@ -191,11 +163,7 @@ $(document).ready(function(){
 	$('[data-toggle="tooltip"]').tooltip();
 });
 </script>
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 785f9d6f3411d24d6b66f0988002835fc3642e64
     <div class="overlay" id = "popup-msg">
         <div class="popup" id = "popup">
             <p>Are you sure you want to log out?</p>
@@ -206,42 +174,7 @@ $(document).ready(function(){
         </div>
     </div>
 
-    <div class="overlay1" id = "openAdd">
-        <div class="popup1" id = "popupAdd">
-            <p class = "formHeader">Add Room Details</p>
-            <form method="post" id="contactFrm">
-                <div class="modal-body">
-                    <div class="response"></div>
-                    <div class="form-group">
-                        <label>Name:</label>
-                        <input type="text" name="username" id="username" class="form-control" required="">
-                    </div>
-                    <div class="form-group">
-                        <label>Room No.:</label>
-                        <input type="text" name="firstname" id="firstname" class="form-control" required="">
-                    </div>
-                    <div class="form-group">
-                        <label>Bed No.:</label>
-                        <input type="text" name="lastname" id="lastname" class="form-control" required="">
-                    </div>
-                    <div class="form-group">
-                        <label>Monthly Rate:</label>
-                        <input type="text" name="mr" id="mr" class="form-control" required="">
-                    </div> <br>
-                    <div class="form-group">
-                        <label for = "status">Status:</label>
-                        <select name = "status" id = "status"> 
-                            <option class = "combo-status" value = "Active"> Active </option>
-                            <option class = "combo-status" value = "Inactive"> Inactive </option>
-                        </select>
-                    </div>
-                    <br>
-                    </form>
-            <div class="text-right">
-                <button class="btn btn-cancel cancel" onclick="closeAdd()">Cancel</button>
-                <button class="btn btn-primary" onclick="">Add</button>
-            </div>
-        </div>
+    
     </div>
 
     
