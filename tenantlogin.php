@@ -1,7 +1,7 @@
 <?php
 include "dbconn.php";
 
-if(isset($_POST['login-submit'])){
+if(isset($_POST['login-submit2'])){
 
     function validate($data) {
         $data = trim($data);
@@ -21,7 +21,7 @@ if(isset($_POST['login-submit'])){
         header("Location: index.php?error=Password is required");
         exit();
     } else {
-        $sql = "SELECT * FROM adminlist WHERE username = '$uname' AND password = '$pass'";
+        $sql = "SELECT * FROM tenant_acc WHERE username = '$uname' AND password = '$pass'";
 
         $result = mysqli_query($conn, $sql);
 
@@ -29,7 +29,7 @@ if(isset($_POST['login-submit'])){
             $row = mysqli_fetch_assoc($result);
                 if ($row['username'] === $uname && $row['password'] === $pass) {
                     $_SESSION['username'] = $row['username'];
-                    header("Location: adminDashboard.php");
+                    header("Location: tenantDashboard.php");
                     exit();
                 } else {
                     header("Location: index.php?error=Incorrect username or password");

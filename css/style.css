@@ -195,3 +195,61 @@ a:hover{
 		justify-content: center;
 	}
 }
+
+
+.error {
+	color: #C62828;
+	background: rgba(255, 0, 0 ,0.1);
+	padding: 10px;
+	width: 95%;
+	border-radius: 5px;
+	margin: 20px auto;
+}
+
+.button-box {
+	width: 100%;
+	margin: 35px auto;
+	position: relative;
+	border-radius: 30px;
+	background: rgb(223, 221, 221);
+}
+.toggle-button {
+	padding: 10px 30px;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	outline: none;
+	position: relative;
+	width: 45%;
+	font-family: 'Poppins', sans-serif;
+}
+
+#bbtn {
+	top: 0;
+	left: 0;
+	width: 50%;
+	position: absolute;
+	height: 100%;
+	background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+	border-radius: 30px;
+	transition: .3s;
+}
+
+#bbtn2 {
+	top: 0;
+	left: 182px;
+	width: 50%;
+	position: absolute;
+	height: 100%;
+	background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+	border-radius: 30px;
+	transition: .3s;
+}
+
+#tenantlogin {
+	display: none;
+}
+
+.input-group {
+	transition: .3s;
+}
