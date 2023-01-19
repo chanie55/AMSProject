@@ -13,12 +13,12 @@
          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> 
             <link rel = "styelsheet" href = "css\utility.css">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <style>
             <?php
                 include "CSS/utility.css"
@@ -90,7 +90,10 @@
 
                 </div>
             </nav>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 785f9d6f3411d24d6b66f0988002835fc3642e64
             <!-- ADD NEW BUTTON --> 
             <div class="margin">   
             <a href="#" class = "btn btn-add mb-5" onclick = "openAdd()"> 
@@ -112,21 +115,33 @@
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
+<<<<<<< HEAD
                         <th>Name</th>
                         <th>Room No.</th>
                         <th>Bed No.</th>
                         <th>Monthly Rate.</th>
                         <th>Status</th>
+=======
+                        <th>Water</th>
+                        <th>Electricity</th>
+                        <th>Rate</th>
+>>>>>>> 785f9d6f3411d24d6b66f0988002835fc3642e64
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+<<<<<<< HEAD
                         <td>Jv Watapampa XD</td>
                         <td>420</td>
                         <td>69</td>
                         <td>15000$</td>
                         <td>Active</td>
+=======
+                        <td>1500$</td>
+                        <td>42069</td>
+                        <td>69</td>
+>>>>>>> 785f9d6f3411d24d6b66f0988002835fc3642e64
                         <td>
                             <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
@@ -136,11 +151,17 @@
 
                 <tbody>
                     <tr>
+<<<<<<< HEAD
                         <td>Jv Watapampa XD</td>
                         <td>420</td>
                         <td>69</td>
                         <td>15000$</td>
                         <td>Active</td>
+=======
+                        <td>1500$</td>
+                        <td>42069$</td>
+                        <td>69</td>
+>>>>>>> 785f9d6f3411d24d6b66f0988002835fc3642e64
                         <td>
                             <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
@@ -170,7 +191,11 @@ $(document).ready(function(){
 	$('[data-toggle="tooltip"]').tooltip();
 });
 </script>
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 785f9d6f3411d24d6b66f0988002835fc3642e64
     <div class="overlay" id = "popup-msg">
         <div class="popup" id = "popup">
             <p>Are you sure you want to log out?</p>
