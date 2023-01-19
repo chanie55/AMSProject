@@ -179,11 +179,7 @@
             </table>
             <div class="clearfix">
                 <ul class="pagination">
-                    <li class="page-item"><a class="fa fa-angle-double-left <?=($page_no <= 1) ? 
-                        'disabled' : ''; ?>" <?= ($page_no > 1) ? 'href=?page_no=' . 
-                        $previous_page : ''; ?>></a></li>
-
-
+                    <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
                     <li class="page-item active"><a href="#" class="page-link">1</a></li>
                     <li class="page-item"><a href="#" class="page-link">2</a></li>
                     <li class="page-item"><a href="#" class="page-link">3</a></li>
@@ -224,7 +220,7 @@ $(document).ready(function(){
     <div class="overlay1" id = "openAdd">
         <div class="popup1" id = "popupAdd">
             <p class = "formHeader">Add New Tenant</p>
-            <form method="post" id="contactFrm" name="contactFrm" action = "addtenant.php" action="page.js">
+            <form method="post" id="contactFrm" name="contactFrm" action = "addtenant.php">
                 <div class="modal-body">
                     <div class="response"></div>
                     <div class="form-group">
@@ -255,7 +251,6 @@ $(document).ready(function(){
                 <button class="btn btn-primary" onclick="" name = "submit-tenant">Add</button>
             </div>
         </div>
-        <script src="js/page.js"></script>
     </div>
 
 

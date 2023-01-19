@@ -224,9 +224,8 @@
 }
 
 .cancel {
-    float: left;
-    background-color: #0ba310;
-    border: none;
+    margin-right: 10px;
+    border: 1px solid black;   
 }
 
 .formHeader {

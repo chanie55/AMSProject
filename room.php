@@ -105,45 +105,68 @@
                     <i class="fa fa-user-plus"style="font-size:23px;float:left" ></i> Add New 
                 </a>
             </div>
-        <!-- TABLE -->
-    <div class="container-xl">
-        <div class="table-wrapper">
-            <div class="table-title">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="search-box">
-                            <i class="material-icons">&#xE8B6;</i>
-                            <input type="text" class="form-control" placeholder="Search&hellip;">
-                        </div>
-                    </div>
+            <div class="container-xl">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                 <div class="row">
+                        <div class="col-sm-4">
+                            <div class="search-box">
+                                <i class="material-icons">&#xE8B6;</i>
+                             <input type="text" class="form-control" placeholder="Search&hellip;">
+                            </div>
+                      </div>
                  </div>
+                </div>
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
                         <th scope="col">Name</th>
                         <th scope="col">Room No.</th>
                         <th scope="col">Bed No.</th>
-                        <th scope="col">Monthly Rate.</th>
-                        <th scope="col">Status</th> 
+                        <th scope="col">Monthly Rate </th>
+                        <th scope="col">Status </th>
                         <th scope="col">Actions</th>
                     </tr>
-                </thead>
+                </thead>    
                 <tbody>
-                  
-                </tbody>
+                <?php
+                  include "dbconn.php";
 
-                
+                  $sql = "SELECT * FROM room_acc";
+                  $result = mysqli_query($conn, $sql);
+
+                  while ($row = mysqli_fetch_assoc($result)) {
+                    ?>
+                    <tr class="data-row">
+                        <td> <?php echo $row['name'] ?> </td>
+                        <td> <?php echo $row['roomno'] ?> </td>
+                        <td> <?php echo $row['bedno'] ?> </td>
+                        <td> <?php echo $row['monthly'] ?> </td>
+                        <td>
+                            <a href = "#" class = "action-icon link-dark">
+                            <i class = "fa-solid fa-eye fs-5 me-3"> </i>
+                            </a>
+                            <a hre  f = "" class = "action-icon link-dark" >
+                            <i class = "fa-solid fa-trash fs-5"></i>
+                            </a> 
+                            </td>
+                    </tr>
+                    <?php
+                  }
+             ?>
+                </tbody>  
             </table>
             <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
                 <ul class="pagination">
                     <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
                     <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
                     <li class="page-item"><a href="#" class="page-link">4</a></li>
                     <li class="page-item"><a href="#" class="page-link">5</a></li>
                     <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
+                
                 </ul>
             </div>
         </div>
@@ -154,7 +177,13 @@ $(document).ready(function(){
 	$('[data-toggle="tooltip"]').tooltip();
 });
 </script>
-
+                       
+                    </tbody> 
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="overlay" id = "popup-msg">
         <div class="popup" id = "popup">
             <p>Are you sure you want to log out?</p>
@@ -168,7 +197,7 @@ $(document).ready(function(){
     <div class="overlay1" id = "openAdd">
         <div class="popup1" id = "popupAdd">
             <p class = "formHeader">Add Room Details</p>
-            <form method="post" id="contactFrm">
+            <form method="post" id="contactFrm" action="addroom.php">
                 <div class="modal-body">
                     <div class="response"></div>
                     <div class="form-group">
@@ -185,13 +214,13 @@ $(document).ready(function(){
                     </div>
                     <div class="form-group">
                         <label>Monthly Rate:</label>
-                        <input type="text" name="monthly" id="monthly" class="form-control" required="">
-                    </div>    
+                        <input type="text" name="monthly" id="monthly" class="form-control" required="">  
                     </div>
+                    <br>
                     </form>
             <div class="text-right">
                 <button class="btn btn-cancel cancel" onclick="closeAdd()">Cancel</button>
-                <button class="btn btn-primary" onclick="">Add</button>
+                <button class="btn btn-primary" onclick="" name="add-room">Add</button>
             </div>
         </div>
     </div>
