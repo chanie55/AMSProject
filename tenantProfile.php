@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -100,33 +101,45 @@
                 <table class = "table text-center">
                     <thread>
                         <tr class = "table-header">
-                            <th scope = "col"> Name</th>
+                            <th scope = "col"> Firstname</th>
+                            <th scope = "col"> LastName </th>
                             <th scope = "col"> Contact No. </th>
-                            <th scope = "col"> Address </th>
                             <th scope = "col"> Action </th>
                         </tr> 
                     </thread>
                     <tbody> 
-                        <tr class = "data-row"> 
-                        <td scope = "row"> Khytryn Faye Carcillar </td>
-                            <td> 09123456789 </td>
-                            <td> D.Lotilla, Isulan, Sultan, Kudarat </td>
-                            <td>
-                                <a href = "#" class = "action-icon link-dark">
-                                    <i class = "fa-solid fa-eye fs-5 me-3"> </i>
-                                </a>
-                                <a href = "#" class = "action-icon link-dark">
-                                    <i class = "fa-solid fa-trash fs-5"></i>
-                                </a> 
-                            </td>
-                        </tr>
+                        <?php
+                            include "dbconn.php";
+
+                            $sql = "SELECT * FROM tenant_acc";
+                            $result = mysqli_query($conn, $sql);
+
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                ?>
+                                    <tr class = "data-row"> 
+                                        <td> <?php echo $row['firstname'] ?> </td>
+                                        <td> <?php echo $row['lastname'] ?> </td>
+                                        <td> <?php echo $row['conNum'] ?> </td>
+                                        <td>
+                                            <a href = "#" class = "action-icon link-dark">
+                                            <i class = "fa-solid fa-eye fs-5 me-3"> </i>
+                                            </a>
+                                            <a href = "" class = "action-icon link-dark" >
+                                            <i class = "fa-solid fa-trash fs-5"></i>
+                                            </a> 
+                                        </td>
+                                    </tr>
+                                <?php
+                            }
+                        ?>
+                        
                     </tbody> 
                 </table>
                 </div>
             </div>
         </div>
     </div>
-        
+                            
     <div class="overlay" id = "popup-msg">
         <div class="popup" id = "popup">
             <p>Are you sure you want to log out?</p>
@@ -142,7 +155,7 @@
     <div class="overlay1" id = "openAdd">
         <div class="popup1" id = "popupAdd">
             <p class = "formHeader">Add New Tenant</p>
-            <form method="post" id="contactFrm">
+            <form method="post" id="contactFrm" action = "addtenant.php">
                 <div class="modal-body">
                     <div class="response"></div>
                     <div class="form-group">
@@ -169,7 +182,7 @@
                     </form>
             <div class="text-right">
                 <button class="btn btn-cancel cancel" onclick="closeAdd()">Cancel</button>
-                <button class="btn btn-primary" onclick="">Add</button>
+                <button class="btn btn-primary" onclick="" name = "submit-tenant">Add</button>
             </div>
         </div>
     </div>
