@@ -85,9 +85,22 @@
             <div class = "table-container">
 
             <div class="search_wrap search_wrap_1">
+
+                <?php
+                    include "dbconn.php";
+
+                    if (isset($_POST['searchbutton'])) {
+                        $searchKey = $_POST['search'];
+                        $sql = "SELECT * FROM users WHERE name LIKE '%$searchKey%'";
+                    } else {
+                        $sql = "SELECT * FROM users";
+
+                        $result = mysqli_query($conn, $sql);
+                    }
+                ?>
                     <div class="search_box">
-                        <input type="text" class="input" placeholder="Search....">
-                        <div class="btn btn_common">
+                        <input name = "search" type="text" class="input" placeholder="Search....">
+                        <div class="btn btn_common searchbutton">
                             <i class="fas fa-search" style="font-size:20px"></i>
                         </div>
                     </div>
