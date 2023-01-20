@@ -15,7 +15,17 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
         <link rel = "styelsheet" href = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
         <link rel = "styelsheet" href = "https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
+        <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
         <link rel = "styelsheet" href = "css\room.css">
+        <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        
         <style>
             <?php
                 include "CSS/room.css"
@@ -49,11 +59,14 @@
                     <a href = "noticeBoard.php" class = "list-group-item second-text active">
                         <i class = "fas fa-commenting me-2"> </i> Notice Board
                     </a>
+                    <a href = "sfTenants.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-commenting me-2"> </i> Suggestion From Tenants
+                    </a>
                     <a href = "invoice.php" class = "list-group-item second-text active">
                         <i class = "fas fa-file-invoice-dollar me-2"> </i> Invoice
                     </a>
                     <a href = "collectibles.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-dollar-sign me-2"> </i> Collectibles
+                        <i class = "fas fa-dollar-sign me-2"> </i> Income Reports
                     </a>
                 </div>
             </div>
@@ -84,59 +97,87 @@
 
                 </div>
             </nav>
-
-            <div class = "table-container">
-
-            <div class="search_wrap search_wrap_1">
-                    <div class="search_box">
-                        <input type="text" class="input" placeholder="Search....">
-                        <div class="btn btn_common">
-                            <i class="fas fa-search" style="font-size:20px"></i>
-                        </div>
-                    </div>
-                </div>
-                            
-                <a href="#" class = "btn btn-add mb-5" onclick = "openAdd()"> 
+        
+            
+            <!-- ADD NEW BUTTON --> 
+            <div class="margin">   
+            <a href="#" class = "btn btn-add mb-5" onclick = "openAdd()"> 
                     <i class="fa fa-user-plus"style="font-size:23px;float:left" ></i> Add New 
                 </a>
+            </div>
+        <!-- TABLE -->
+    <div class="container-xl">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="search-box">
+                            <i class="material-icons">&#xE8B6;</i>
+                            <input type="text" class="form-control" placeholder="Search&hellip;">
+                        </div>
+                    </div>
+                 </div>
+            <table class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Room No.</th>
+                        <th>Bed No.</th>
+                        <th>Monthly Rate.</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jv Watapampa XD</td>
+                        <td>420</td>
+                        <td>69</td>
+                        <td>15000$</td>
+                        <td>Active</td>
+                        <td>
+                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>       
+                </tbody>
 
-                <div class = "table-border">
-                <table id = "example" class = "table table-striped text-center">
-                    <thread>
-                        <tr class = "table-header">
-                            <th scope = "col"> Name </th>
-                            <th scope = "col"> Room No. </th>
-                            <th scope = "col"> Bed No. </th>
-                            <th scope = "col"> Monthly Rate </th>
-                            <th scope = "col"> Status </th>
-                            <th scope = "col"> Action </th>
-                        </tr> 
-                    </thread>
-                    <tbody> 
-                        <tr class = "data-row"> 
-                        <td scope = "row"> Julie </td>
-                            <td> 1 </td>
-                            <td> 1 </td>
-                            <td> 3, 500 </td>
-                            <td> Active </td>
-                            <td>
-                                <a href = "#" class = "action-icon link-dark" onclick = "openAdd()">
-                                    <i class = "fa-solid fa-pen-to-square fs-5 me-3"> </i>
-                                </a>
-                                <a href = "#" class = "action-icon link-dark">
-                                    <i class = "fa-solid fa-trash fs-5"></i>
-                                </a> 
-                            </td>
-                        </tr>
-                    </tbody>
-                     
-                </table>
-                </div>
+                <tbody>
+                    <tr>
+                        <td>Jv Watapampa XD</td>
+                        <td>420</td>
+                        <td>69</td>
+                        <td>15000$</td>
+                        <td>Active</td>
+                        <td>
+                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>       
+                </tbody>
+
+                
+            </table>
+            <div class="clearfix">
+                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                <ul class="pagination">
+                    <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                    <li class="page-item"><a href="#" class="page-link">5</a></li>
+                    <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
+                </ul>
             </div>
         </div>
-
-        
-    </div>
+    </div>  
+</div>
+<script>
+$(document).ready(function(){
+	$('[data-toggle="tooltip"]').tooltip();
+});
+</script>
 
     <div class="overlay" id = "popup-msg">
         <div class="popup" id = "popup">
@@ -168,7 +209,7 @@
                     </div>
                     <div class="form-group">
                         <label>Monthly Rate:</label>
-                        <input type="password" name="password" id="password" class="form-control" required="">
+                        <input type="text" name="mr" id="mr" class="form-control" required="">
                     </div> <br>
                     <div class="form-group">
                         <label for = "status">Status:</label>
@@ -185,6 +226,8 @@
             </div>
         </div>
     </div>
+
+    
 
         <script scr = "https://code.jquery.com/jquery-3.5.1.js"> </script>
         <script scr = "https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"> </script>
@@ -217,5 +260,15 @@
 });
 </script>
         
+
+<script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!-- DATATABLE SCRIPTS  -->
+    <script src="assets/js/dataTables/jquery.dataTables.js"></script>
+    <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
+      <!-- CUSTOM SCRIPTS  -->
+    <script src="assets/js/custom.js"></script>
+
     </body>
 </html>

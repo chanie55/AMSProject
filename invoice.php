@@ -45,11 +45,14 @@
                     <a href = "noticeBoard.php" class = "list-group-item second-text active">
                         <i class = "fas fa-commenting me-2"> </i> Notice Board
                     </a>
+                    <a href = "sfTenants.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-commenting me-2"> </i> Suggestion From Tenants
+                    </a>
                     <a href = "invoice.php" class = "list-group-item second-text active">
                         <i class = "fas fa-file-invoice-dollar me-2"> </i> Invoice
                     </a>
                     <a href = "collectibles.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-dollar-sign me-2"> </i> Collectibles
+                        <i class = "fas fa-dollar-sign me-2"> </i> Income Reports
                     </a>
                 </div>
             </div>
