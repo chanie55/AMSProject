@@ -229,7 +229,7 @@ $(document).ready(function(){
                     </div>
                     <div class="form-group">
                         <label>First name:</label>
-                        <input type="text" name="firstname" id="firstname" class="form-control" required="">
+                        <input type="text" name="firstname" id="firstname" class="form-control" required="" >
                     </div>
                     <div class="form-group">
                         <label>Last name:</label>

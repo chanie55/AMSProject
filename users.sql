@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 19, 2023 at 03:48 AM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.2.32
+-- Generation Time: Jan 20, 2023 at 01:37 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `adminlist` (
   `username` varchar(99) NOT NULL,
   `password` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `adminlist`
@@ -39,6 +39,29 @@ CREATE TABLE `adminlist` (
 INSERT INTO `adminlist` (`username`, `password`) VALUES
 ('admin', '1234'),
 ('admin', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `room_acc`
+--
+
+CREATE TABLE `room_acc` (
+  `name` varchar(99) NOT NULL,
+  `roomno` double NOT NULL,
+  `bedno` double NOT NULL,
+  `monthly` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `room_acc`
+--
+
+INSERT INTO `room_acc` (`name`, `roomno`, `bedno`, `monthly`) VALUES
+('asd', 213.12, 123.123, 123.1),
+('asd', 0, 0, 0),
+('asd', 0, 0, 0),
+('asd', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -52,18 +75,56 @@ CREATE TABLE `tenant_acc` (
   `lastname` varchar(99) NOT NULL,
   `password` varchar(16) NOT NULL,
   `conNum` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tenant_acc`
 --
 
 INSERT INTO `tenant_acc` (`username`, `firstname`, `lastname`, `password`, `conNum`) VALUES
-('fff', 'ff', 'ff', 'ff', 1),
-('khytryn123', 'Khytryn', 'Carcillar', '1234', 2147483647),
-('elmer_666', 'Elmer', 'Varquez', '123456789', 934376235),
-('ddg', 'xcx', 'jhj', '1245', 0),
-('jv', 'Jv', 'Laroco', 'jv123', 92173173);
+('asdw', 'asdw', 'asdw', 'asdwa', 1213),
+('asad', 'asd', 'asdwas', '123', 123),
+('asdw', 'asdwa', 'awdas', 'awdas', 123123),
+('asdw', 'adwas', 'awdas', 'awdsa', 0),
+('asdw', 'asdwa', 'asd', 'asdw', 0),
+('a', 'a', 'a', 'a', 0),
+('asd', 'asd', 'as', 'a', 0),
+('asd', 'as', 'a', 'a', 0),
+('asd', 'asd', 'asd', 'asd', 0),
+('123', 'asdwa', 'asdwa', 'asdw', 0),
+('123', 'asdw', 'adwa', 'awd', 12312),
+('123', '13', '123', '123', 123),
+('12', '123', '123', '123', 123),
+('AS', 'as', 'AS', 'as', 0),
+('asd', 'asd', 'asd', 'asd', 123),
+('asd', '2123', 'asd', 'awd', 123),
+('asd', '123', 'asdw', 'asd', 123),
+('ad', '312', 's', 'as', 123),
+('a', '123', 'a', '1a', 123),
+('asd', '123', 'qd', 'asd', 12),
+('asd', '123', 'ajd', 'ad', 123),
+('asd', '123', 'jkahd', 'asdj', 0),
+('jhg', '131', 'jhd', 'jhasd', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `utility_bills`
+--
+
+CREATE TABLE `utility_bills` (
+  `name` varchar(99) NOT NULL,
+  `water` double NOT NULL,
+  `electricity` double NOT NULL,
+  `rate` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `utility_bills`
+--
+
+INSERT INTO `utility_bills` (`name`, `water`, `electricity`, `rate`) VALUES
+('asd', 123, 123, 123);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
