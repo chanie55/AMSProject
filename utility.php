@@ -110,38 +110,41 @@
                  </div>
             <table class="table table-striped table-hover table-bordered">
                 <thead>
-                    <tr>
-                        <th>Water</th>
-                        <th>Electricity</th>
-                        <th>Rate</th>
-                        <th>Actions</th>
+                   <tr>
+                    <th scope="col"> Name </th>
+                    <th scope="col"> Water </th>
+                    <th scope="col"> Electricity </th>
+                    <th scope="col"> Rate </th>
+                    <th scope="col"> Action </th>
+                   </tr>
+                </thead> 
+                <tbody>     
+                    <?php
+                    include "dbconn.php";
+
+                    $sql = "SELECT * FROM utility_bills";
+                    $result = mysqli_query($conn, $sql);
+
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        ?>
+                        <tr class="data-row">
+                        <td> <?php echo $row['name'] ?> </td>
+                        <td> <?php echo $row['water'] ?> </td>
+                        <td> <?php echo $row['electricity'] ?> </td>
+                        <td> <?php echo $row['rate'] ?> </td>
+                        <td>
+                        <a href = "#" class = "action-icon link-dark">
+                            <i class = "fa-solid fa-eye fs-5 me-3"> </i>
+                            </a>
+                            <a hre  f = "" class = "action-icon link-dark" >
+                            <i class = "fa-solid fa-trash fs-5"></i>
+                            </a> 
+                            </td>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1500$</td>
-                        <td>42069</td>
-                        <td>69</td>
-                        <td>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>       
+                        <?php
+                    }
+                    ?>
                 </tbody>
-
-                <tbody>
-                    <tr>
-                        <td>1500$</td>
-                        <td>42069$</td>
-                        <td>69</td>
-                        <td>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>       
-                </tbody>
-
-                
             </table>
             <div class="clearfix">
                 <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
@@ -164,6 +167,12 @@ $(document).ready(function(){
 });
 </script>
         
+</tbody> 
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="overlay" id = "popup-msg">
         <div class="popup" id = "popup">
             <p>Are you sure you want to log out?</p>
@@ -174,11 +183,38 @@ $(document).ready(function(){
         </div>
     </div>
 
-    
+    <div class="overlay1" id = "openAdd">
+        <div class="popup1" id = "popupAdd">
+            <p class = "formHeader">Add Room Details</p>
+            <form method="post" id="contactFrm" action="utilitydb.php">
+                <div class="modal-body">
+                    <div class="response"></div>
+                    <div class="form-group">
+                        <label>Name:</label>
+                        <input type="text" name="name" id="name" class="form-control" required="">
+                    </div>
+                    <div class="form-group">
+                        <label> Water Bill:</label>
+                        <input type="text" name="water" id="water" class="form-control" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Electricity Bill:</label>
+                        <input type="text" name="electricity" id="electricity" class="form-control" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Monthly Rate:</label>
+                        <input type="text" name="rate" id="rate" class="form-control" required="">  
+                    </div>
+                    <br>
+                    </form>
+            <div class="text-right">
+                <button class="btn btn-cancel cancel" onclick="closeAdd()">Cancel</button>
+                <button class="btn btn-primary" onclick="" name="add-utility">Add</button>
+            </div>
+        </div>
     </div>
 
     
-
         <script scr = "https://code.jquery.com/jquery-3.5.1.js"> </script>
         <script scr = "https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"> </script>
         <script scr = "https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"> </script>

@@ -142,72 +142,29 @@
 
         <!-- TABLE -->
     <div class="container-xl">
-        <div class="table-wrapper">
-            <div class="table-title">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="search-box">
-                            <i class="material-icons">&#xE8B6;</i>
-                            <input type="text" class="form-control" placeholder="Search&hellip;">
-                        </div>
-                    </div>
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                 <div class="row">
+                        <div class="col-sm-4">
+                            <div class="search-box">
+                                <i class="material-icons">&#xE8B6;</i>
+                             <input type="text" class="form-control" placeholder="Search&hellip;">
+                            </div>
+                      </div>
                  </div>
+                </div>
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Contact No.</th>
-                        <th>Actions</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Contact No.</th>
+                        <th scope="col">Actions</th>
                     </tr>
-                </thead>
+                </thead>    
                 <tbody>
-                    <tr>
-                        <td>Jv</td>
-                        <td>Watapampa</td>
-                        <td>01234567891</td>
-                        <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a> 
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>       
-                </tbody>
-
-                <tbody>
-                    <tr>
-                        <td>Jv</td>
-                        <td>Watampapa</td>
-                        <td>091234567890</td>
-                        <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>       
-                </tbody>
-
-                
-            </table>
-            <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
-                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>  
-</div>
-<script>
-$(document).ready(function(){
-	$('[data-toggle="tooltip"]').tooltip();
-});
-</script>
-                        <?php
+                <?php
                             include "dbconn.php";
 
                             $sql = "SELECT * FROM tenant_acc";
@@ -223,7 +180,7 @@ $(document).ready(function(){
                                             <a href = "#" class = "action-icon link-dark">
                                             <i class = "fa-solid fa-eye fs-5 me-3"> </i>
                                             </a>
-                                            <a href = "" class = "action-icon link-dark" >
+                                            <a hre  f = "" class = "action-icon link-dark" >
                                             <i class = "fa-solid fa-trash fs-5"></i>
                                             </a> 
                                         </td>
@@ -231,7 +188,29 @@ $(document).ready(function(){
                                 <?php
                             }
                         ?> 
-                        
+                </tbody>  
+            </table>
+            <div class="clearfix">
+                <ul class="pagination">
+                    <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                    <li class="page-item"><a href="#" class="page-link">5</a></li>
+                    <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>  
+</div>
+<script>
+$(document).ready(function(){
+	$('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+                       
                     </tbody> 
                 </table>
                 </div>
@@ -254,7 +233,7 @@ $(document).ready(function(){
     <div class="overlay1" id = "openAdd">
         <div class="popup1" id = "popupAdd">
             <p class = "formHeader">Add New Tenant</p>
-            <form method="post" id="contactFrm" action = "addtenant.php">
+            <form method="post" id="contactFrm" name="contactFrm" action = "addtenant.php">
                 <div class="modal-body">
                     <div class="response"></div>
                     <div class="form-group">
@@ -263,7 +242,7 @@ $(document).ready(function(){
                     </div>
                     <div class="form-group">
                         <label>First name:</label>
-                        <input type="text" name="firstname" id="firstname" class="form-control" required="">
+                        <input type="text" name="firstname" id="firstname" class="form-control" required="" >
                     </div>
                     <div class="form-group">
                         <label>Last name:</label>
@@ -310,11 +289,6 @@ $(document).ready(function(){
         document.getElementById("openAdd").style.visibility = "hidden";
     document.getElementById("popupAdd").style.visibility = "hidden";
     }
-</script>
-
-
-      
-
-           
+</script>   
     </body>
 </html>
