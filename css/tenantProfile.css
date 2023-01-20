@@ -137,7 +137,7 @@
 .btn-add {
     background-color: #a1f8a4;
     margin-left: 118px;
-    margin-top: 5%;
+    margin-top: 10px;
     font-weight: bold;
     color: #2f3031;
 }
@@ -225,6 +225,7 @@
 
 .cancel {
     border: 1px solid black;
+    margin-right: 10px;
 }
 
 .formHeader {
@@ -236,6 +237,9 @@ body {
     color: #566787;
     background: #44d0f4;
     font-family: 'Roboto', sans-serif;
+}
+.table-responsive {
+    margin: 30px 0;
 }
 
 .table-wrapper {
@@ -290,6 +294,9 @@ table.table td a {
     display: inline-block;
     margin: 0 5px;
 }
+table.table td a.view {
+    color: #03A9F4;
+}
 table.table td a.edit {
     color: #FFC107;
 }
@@ -339,5 +346,5 @@ table.table td i {
     margin-left: 25px;
 }
 .margin {
-    height: 120px;
+    height: 10px;
 }

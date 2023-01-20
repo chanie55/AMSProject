@@ -18,5 +18,7 @@ if (isset($_POST['submit-tenant'])) {
     } else {
         echo "Failed" ;
     }
+
 }
+
 ?>
