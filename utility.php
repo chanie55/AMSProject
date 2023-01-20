@@ -191,19 +191,19 @@ $(document).ready(function(){
                     <div class="response"></div>
                     <div class="form-group">
                         <label>Name:</label>
-                        <input type="text" name="name" id="name" class="form-control" required="">
+                        <input type="text" name="name" id="name" class="form-control" pattern="[A-Za-z]{1,}" required="">
                     </div>
                     <div class="form-group">
                         <label> Water Bill:</label>
-                        <input type="text" name="water" id="water" class="form-control" required="">
+                        <input type="text" name="water" id="water" class="form-control" pattern="[0-9]+([\.,][0-9]+)?" required="">
                     </div>
                     <div class="form-group">
                         <label>Electricity Bill:</label>
-                        <input type="text" name="electricity" id="electricity" class="form-control" required="">
+                        <input type="text" name="electricity" id="electricity" class="form-control" pattern="[0-9]+([\.,][0-9]+)?" required="">
                     </div>
                     <div class="form-group">
                         <label>Monthly Rate:</label>
-                        <input type="text" name="rate" id="rate" class="form-control" required="">  
+                        <input type="text" name="rate" id="rate" class="form-control" pattern="[0-9]+([\.,][0-9]+)?" required="">  
                     </div>
                     <br>
                     </form>
