@@ -1,5 +1,5 @@
 //still not working.. javascript wont connect to html form
-
+/** 
 var username = document.forms['formlogin']['username'];
 var password = document.forms['formlogin']['password'];
 
@@ -25,5 +25,5 @@ function validate() {
         return false;
     }
 }
-
+ */
 

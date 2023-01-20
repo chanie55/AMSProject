@@ -192,16 +192,16 @@
             </table>
             <div class="clearfix">
                 <ul class="pagination">
-                    <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                    <li class="page-item"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
                     <li class="page-item active"><a href="#" class="page-link">1</a></li>
                     <li class="page-item"><a href="#" class="page-link">2</a></li>
                     <li class="page-item"><a href="#" class="page-link">3</a></li>
                     <li class="page-item"><a href="#" class="page-link">4</a></li>
                     <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
-                
+                    <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>                    
                 </ul>
             </div>
+    
         </div>
     </div>  
 </div>
@@ -242,11 +242,11 @@ $(document).ready(function(){
                     </div>
                     <div class="form-group">
                         <label>First name:</label>
-                        <input type="text" name="firstname" id="firstname" class="form-control" required="" >
+                        <input type="text"  name="firstname" id="firstname" class="form-control" pattern="[A-Za-z]{1,}" required="" >
                     </div>
                     <div class="form-group">
                         <label>Last name:</label>
-                        <input type="text" name="lastname" id="lastname" class="form-control" required="">
+                        <input type="text" name="lastname" id="lastname" class="form-control" pattern="[A-Za-z]{1,}" required="">
                     </div>
                     <div class="form-group">
                         <label>Password:</label>
@@ -254,7 +254,7 @@ $(document).ready(function(){
                     </div>
                     <div class="form-group">
                         <label>Contact Number:</label>
-                        <input type="text" name="conNum" id="conNum" class="form-control" required="">
+                        <input type="text" name="conNum" id="conNum" class="form-control" pattern="[0-9]*"  required="">
 
                     </div>
                     <br>
@@ -265,7 +265,6 @@ $(document).ready(function(){
             </div>
         </div>
     </div>
-
 
     <script>
     function openForm() {
