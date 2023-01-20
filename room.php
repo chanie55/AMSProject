@@ -202,19 +202,19 @@ $(document).ready(function(){
                     <div class="response"></div>
                     <div class="form-group">
                         <label>Name:</label>
-                        <input type="text" name="name" id="name" class="form-control" required="">
+                        <input type="text" name="name" id="name" class="form-control" pattern="[A-Za-z]{1,}" required="">
                     </div>
                     <div class="form-group">
                         <label>Room No.:</label>
-                        <input type="text" name="roomno" id="roomno" class="form-control" required="">
+                        <input type="text" name="roomno" id="roomno" class="form-control" pattern="[0-9]*" required="">
                     </div>
                     <div class="form-group">
                         <label>Bed No.:</label>
-                        <input type="text" name="bedno" id="bedno" class="form-control" required="">
+                        <input type="text" name="bedno" id="bedno" class="form-control" pattern="[0-9]*" required="">
                     </div>
                     <div class="form-group">
                         <label>Monthly Rate:</label>
-                        <input type="text" name="monthly" id="monthly" class="form-control" required="">  
+                        <input type="text" name="monthly" id="monthly" class="form-control" pattern="[0-9]+([\.,][0-9]+)?" required="">  
                     </div>
                     <br>
                     </form>
