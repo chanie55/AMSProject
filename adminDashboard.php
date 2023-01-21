@@ -57,6 +57,9 @@ session_start();
                     <a href = "invoice.php" class = "list-group-item second-text active">
                         <i class = "fas fa-file-invoice-dollar me-2"> </i> Invoice
                     </a>
+                    <a href = "invoice.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-file-invoice-dollar me-2"> </i> Payment Sent by Tenants
+                    </a>
                     <a href = "collectibles.php" class = "list-group-item second-text active">
                         <i class = "fas fa-dollar-sign me-2"> </i> Income Reports
                     </a>
