@@ -32,7 +32,7 @@
 
 #sidebar-wrapper {
     min-height: 100vh;
-    width: 188px;
+    width: 183px;
     margin-left: 0;
 }
 
@@ -72,6 +72,10 @@
     font-weight: bold;
     border: none;
     width: 188px;
+    text-decoration: none;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    font-size: 15px;
 }
 
 .list-group-item.active:hover {
@@ -159,9 +163,6 @@ input[type=text] {
   }
  .modal-footer{
     width: 10%;
-<<<<<<< HEAD
-    margin-left: 79%;
-=======
     margin-left: 61%;
   }
 
@@ -190,5 +191,4 @@ input[type=text] {
     bottom: 0;
     background: rgba(0,0,0,.10);
     z-index: 10000;
->>>>>>> aad2a0e4e780542ace93c605e47bfc97112817ab
   }

@@ -42,7 +42,7 @@
                         <i class = "fas fa-home-alt me-2"> </i> Home
                     </a>
                     <a href = "tenantProfile.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-user-alt me-2"> </i> Tenant's Profile
+                        <i class = "fas fa-user-alt me-2"> </i> Manage Tenant
                     </a>
                     <a href = "room.php" class = "list-group-item second-text active">
                         <i class = "fas fa-door-open me-2"> </i> Room Management
@@ -73,7 +73,7 @@
         <div id = "page-content-wrapper">
             <nav class = "navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                 <div class = "d-flex align-items-center"> 
-                    <h2 class = "fs-2 m-0"> Tenant's Profile </h2>
+                    <h2 class = "fs-2 m-0"> Manage Tenant </h2>
                 </div>
 
                 <div class = "navbar-collapse">
