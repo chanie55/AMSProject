@@ -185,7 +185,7 @@
 
                     </td>
                     <td>
-                    <a href="popup2.php"> <button class="editPen fa fa-pencil"></button></a>
+                    <a href="#" onclick="openAdd()"> <button class="editPen fa fa-pencil"></button></a>
                     
                     </td>
                           
@@ -278,7 +278,7 @@ $(document).ready(function(){
                     <div class="response"></div>
                     <div class="form-group">
                         <label>Name:</label>
-                        <input type="text" name="name" id="name" class="form-control" value = "khyt" pattern="[A-Za-z]{1,}" required="">
+                        <input type="text" name="name" id="name" class="form-control" pattern="[A-Za-z]{1,}" required="">
                     </div>
                     <div class="form-group">
                         <label>Room No.:</label>
