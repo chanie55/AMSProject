@@ -92,12 +92,7 @@
 
                 </div>
             </nav>
-  <!-- ADD NEW BUTTON --> 
-  <div class="margin">   
-            <a href="#" class = "btn btn-add mb-5" onclick = "openAdd()"> 
-                    <i class="fa fa-user-plus"style="font-size:23px;float:left" ></i> Add New 
-                </a>
-            </div>
+  
         <!-- TABLE -->
     <div class="container-xl">
         <div class="table-wrapper">
