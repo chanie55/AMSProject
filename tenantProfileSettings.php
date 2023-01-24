@@ -35,7 +35,27 @@
             </tr>
           </thead>
           <tbody>
+              <?php
 
+              include "dbconn.php";
+              $sql = "SELECT * FROM tenant_prof";
+              $result = mysqli_query($conn, $sql);
+
+              while ($row = mysqli_fetch_assoc($result)){
+                ?>
+                <tr class="data-row">
+                  <td> <?php echo $row['firstname'] ?> </td>
+                  <td> <?php echo $row['lastname']?> </td>
+                  <td> <?php echo $row['mobilenum']?> </td>
+                  <td> <?php echo $row['address']?> </td>
+                  <td> <?php echo $row['emailadd']?> </td>
+                  <td> <?php echo $row['occupation']?> </td>
+                  <td> <?php echo $row['gender']?> </td>
+                  <td> <?php echo $row['birthdate']?> </td>
+                </tr>
+                <?php
+              }
+              ?>
           </tbody>
               <div class="p-2 py-4">
                   <div class="d-flex justify-content-between align-items-center mb-3">
@@ -48,14 +68,14 @@
                   <div class="row mt-3">
                       <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder=" " value="" name="mobilenum" pattern="[0-9]*"></div>
                       <div class="col-md-12"><label class="labels">Address</label><input type="text" class="form-control" placeholder="Optional" value="" name="address" pattern="[A-Za-z]{1,}"></div>
-                      <div class="col-md-12"><label class="labels">Email Address</label><input type="email" class="form-control" placeholder=" " value="" name="emailid" required=""></div>
+                      <div class="col-md-12"><label class="labels">Email Address</label><input type="email" class="form-control" placeholder=" " value="" name="emailadd" required=""></div>
                       <div class="col-md-12"><label class="labels">Occupation</label><input type="text" class="form-control" placeholder="Optional" value="" name="occupation" required="" pattern="[A-Za-z]{1,}"></div>
                   </div>
                   <div class="row mt-3">
                       <div class="col-md-6"><label class="labels">Gender</label><input type="text" class="form-control" placeholder=" " value="" name="gender" pattern="[A-Za-z]{1,}"></div>
                       <div class="col-md-6"><label class="labels">Birthdate</label><input type="date" class="form-control" value="" placeholder="" name="birthdate" pattern="[0-9]*"></div>
                   </div>
-                  <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                  <div class="mt-5 text-center"><button class="btn btn-primary profile-button" onclick="" name="update-prof">Save Profile</button></div>
               </div>
           </div>
       </div>
