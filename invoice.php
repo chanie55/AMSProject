@@ -35,7 +35,7 @@
                         <i class = "fas fa-home-alt me-2"> </i> Home
                     </a>
                     <a href = "tenantProfile.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-user-alt me-2"> </i> Manage Tenant
+                        <i class = "fas fa-user-alt me-2"> </i> Tenant's Profile
                     </a>
                     <a href = "room.php" class = "list-group-item second-text active">
                         <i class = "fas fa-door-open me-2"> </i> Room Management
@@ -50,9 +50,9 @@
                         <i class = "fas fa-commenting me-2"> </i> Suggestion From Tenants
                     </a>
                     <a href = "invoice.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-file-invoice-dollar me-2"> </i> Invoice
+                        <i class = "fas fa-file-invoice-dollar me-2"> </i> Statement of Account
                     </a>
-                    <a href = "invoice.php" class = "list-group-item second-text active">
+                    <a href = "paymentSent.php" class = "list-group-item second-text active">
                         <i class = "fas fa-file-invoice-dollar me-2"> </i> Payment Sent by Tenants
                     </a>
                     <a href = "collectibles.php" class = "list-group-item second-text active">
@@ -66,7 +66,7 @@
         <div id = "page-content-wrapper">
             <nav class = "navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                 <div class = "d-flex align-items-center"> 
-                    <h2 class = "fs-2 m-0"> Invoice </h2>
+                    <h2 class = "fs-2 m-0"> Statement of Account </h2>
                 </div>
 
                 <div class = "navbar-collapse">
@@ -96,7 +96,7 @@
     <div class="container mb-5 mt-3">
       <div class="row d-flex align-items-baseline">
         <div class="col-xl-9">
-          <p style="color: #7e8d9f;font-size: 20px;">Invoice >> <strong>ID: #123-123</strong></p>
+          <p style="color: #7e8d9f;font-size: 20px;">Statement Account >> <strong>ID: #123-123</strong></p>
         </div>
         <div class="col-xl-3 float-end">
           <a class="btn btn-light text-capitalize border-0" data-mdb-ripple-color="dark"><i
@@ -123,7 +123,7 @@
             </ul>
           </div>
           <div class="col-xl-4">
-            <p class="text-muted">Invoice</p>
+            <p class="text-muted">Statement of Account</p>
             <ul class="list-unstyled">
               <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
                   class="fw-bold">ID:</span>#123-456</li>
@@ -150,21 +150,21 @@
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>Monthly Due</td>
+                <td>Pro Package</td>
                 <td>4</td>
                 <td>$200</td>
                 <td>$800</td>
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td>Water</td>
+                <td>Web hosting</td>
                 <td>1</td>
                 <td>$10</td>
                 <td>$10</td>
               </tr>
               <tr>
                 <th scope="row">3</th>
-                <td>Electricity</td>
+                <td>Consulting</td>
                 <td>1 year</td>
                 <td>$300</td>
                 <td>$300</td>
@@ -190,6 +190,7 @@
         <hr>
         <div class="row">
           <div class="col-xl-10">
+            <p>Thank you for your purchase</p>
           </div>
           <div class="col-xl-2">
             <button type="button" class="btn btn-primary text-capitalize"
@@ -202,7 +203,7 @@
   </div>
 </div>
     
-       
+       <!-- CLOSE INVOICE -->
    
 
 

@@ -128,6 +128,7 @@
                         <th scope="col">Room No.</th>
                         <th scope="col">Bed No.</th>
                         <th scope="col">Monthly Rate </th>
+                        <th scope="col">Start Date </th>
                         <th scope="col">Status </th>
                         <th scope="col">Actions</th>
                     </tr>
@@ -158,17 +159,45 @@
                         <td> <?php echo $row['roomno'] ?> </td>
                         <td> <?php echo $row['bedno'] ?> </td>
                         <td> <?php echo $row['monthly'] ?> </td>
+                        <td> <?php echo $row['startdate'] ?> </td>
+                          
                         <td>
-                            <a href = "#" class = "action-icon link-dark">
-                            <i class = "fa-solid fa-eye fs-5 me-3"> </i>
-                            </a>
-                            <a hre  f = "" class = "action-icon link-dark" >
-                            <i class = "fa-solid fa-trash fs-5"></i>
-                            </a> 
-                            </td>
+                            
+                    
+                        
+                        <!-- <button class="btn-success" id="myText" onclick="myFunction()">Active</button>
+                        <script>
+                        
+                      
+                        function myFunction() {
+                        document.getElementById("myText").Name = "Inactive";    
+                        
+                        
+                    </script> -->
+
+                     
+                    <label class="switch">
+                     <input type="checkbox" >
+                     <span class="slider round"></span>
+
+                     </label>
+                <!-- <button onclick="myFunction()">Try it</button> -->
+
+                    </td>
+                    <td>
+                    <a href="popup2.php"> <button class="editPen fa fa-pencil"></button></a>
+                    
+                    </td>
+                          
+                            
                     </tr>
+
+                    
+                    
                     <?php
                   }
+
+                  
              ?>
                 </tbody>  
             </table>
@@ -249,7 +278,7 @@ $(document).ready(function(){
                     <div class="response"></div>
                     <div class="form-group">
                         <label>Name:</label>
-                        <input type="text" name="name" id="name" class="form-control" pattern="[A-Za-z]{1,}" required="">
+                        <input type="text" name="name" id="name" class="form-control" value = "khyt" pattern="[A-Za-z]{1,}" required="">
                     </div>
                     <div class="form-group">
                         <label>Room No.:</label>
@@ -263,6 +292,10 @@ $(document).ready(function(){
                         <label>Monthly Rate:</label>
                         <input type="text" name="monthly" id="monthly" class="form-control" pattern="[0-9]+([\.,][0-9]+)?" required="">  
                     </div>
+                    <div class="form-group">
+                        <label>Start Date:</label>
+                        <input type="date" name="startdate" id="monthly" class="form-control" required="">  
+                    </div>
                     <br>
                     </form>
             <div class="text-right">
@@ -271,6 +304,8 @@ $(document).ready(function(){
             </div>
         </div>
     </div>
+
+
 
     
 
