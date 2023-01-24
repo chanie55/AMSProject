@@ -40,7 +40,7 @@ session_start();
                         <i class = "fas fa-home-alt me-2"> </i> Home
                     </a>
                     <a href = "tenantProfile.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-user-alt me-2"> </i> Tenant's Profile
+                        <i class = "fas fa-user-alt me-2"> </i> Manage Tenant
                     </a>
                     <a href = "room.php" class = "list-group-item second-text active">
                         <i class = "fas fa-door-open me-2"> </i> Room Management
@@ -123,7 +123,18 @@ session_start();
                     <div class = "col-md-4">
                         <div class = "p-3 bg-white border = 2 shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div> 
-                                <h3 class = "fs-2"> 20</h3>
+                            <?php
+                                    include "dbconn.php";
+
+                                    $rooms_query = "SELECT * FROM room_acc";
+                                    $rooms_query_num = mysqli_query($conn, $rooms_query);
+
+                                    if ($rooms_total = mysqli_num_rows($rooms_query_num)) {
+                                        echo '<h3 class = "fs-2"> '.$rooms_total.' </h3>';
+                                    } else {
+                                        echo '<h3 class = "fs-2"> No Data </h3>';
+                                    }
+                                ?>
                                 <p class = "fs-5 box"> No. of Rooms </p>
                             </div> 
                             <i class = "fas fa-door-open fs-1 primary-text border rounded-full secondary-bg p-3"></i>

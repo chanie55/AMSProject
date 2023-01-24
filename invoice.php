@@ -35,7 +35,7 @@
                         <i class = "fas fa-home-alt me-2"> </i> Home
                     </a>
                     <a href = "tenantProfile.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-user-alt me-2"> </i> Tenant's Profile
+                        <i class = "fas fa-user-alt me-2"> </i> Manage Tenant
                     </a>
                     <a href = "room.php" class = "list-group-item second-text active">
                         <i class = "fas fa-door-open me-2"> </i> Room Management
@@ -150,21 +150,21 @@
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>Pro Package</td>
+                <td>Monthly Due</td>
                 <td>4</td>
                 <td>$200</td>
                 <td>$800</td>
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td>Web hosting</td>
+                <td>Water</td>
                 <td>1</td>
                 <td>$10</td>
                 <td>$10</td>
               </tr>
               <tr>
                 <th scope="row">3</th>
-                <td>Consulting</td>
+                <td>Electricity</td>
                 <td>1 year</td>
                 <td>$300</td>
                 <td>$300</td>
@@ -190,7 +190,6 @@
         <hr>
         <div class="row">
           <div class="col-xl-10">
-            <p>Thank you for your purchase</p>
           </div>
           <div class="col-xl-2">
             <button type="button" class="btn btn-primary text-capitalize"
