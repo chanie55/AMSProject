@@ -41,7 +41,7 @@
                         <i class = "fas fa-home-alt me-2"> </i> Home
                     </a>
                     <a href = "tenantProfile.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-user-alt me-2"> </i> Tenant's Profile
+                        <i class = "fas fa-user-alt me-2"> </i> Manage Tenant
                     </a>
                     <a href = "room.php" class = "list-group-item second-text active">
                         <i class = "fas fa-door-open me-2"> </i> Room Management
@@ -57,6 +57,9 @@
                     </a>
                     <a href = "invoice.php" class = "list-group-item second-text active">
                         <i class = "fas fa-file-invoice-dollar me-2"> </i> Invoice
+                    </a>
+                    <a href = "invoice.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-file-invoice-dollar me-2"> </i> Payment Sent by Tenants
                     </a>
                     <a href = "collectibles.php" class = "list-group-item second-text active">
                         <i class = "fas fa-dollar-sign me-2"> </i> Income Reports

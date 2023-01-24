@@ -42,7 +42,7 @@
                         <i class = "fas fa-home-alt me-2"> </i> Home
                     </a>
                     <a href = "tenantProfile.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-user-alt me-2"> </i> Tenant's Profile
+                        <i class = "fas fa-user-alt me-2"> </i> Manage Tenant
                     </a>
                     <a href = "room.php" class = "list-group-item second-text active">
                         <i class = "fas fa-door-open me-2"> </i> Room Management
@@ -59,6 +59,9 @@
                     <a href = "invoice.php" class = "list-group-item second-text active">
                         <i class = "fas fa-file-invoice-dollar me-2"> </i> Invoice
                     </a>
+                    <a href = "invoice.php" class = "list-group-item second-text active">
+                        <i class = "fas fa-file-invoice-dollar me-2"> </i> Payment Sent by Tenants
+                    </a>
                     <a href = "collectibles.php" class = "list-group-item second-text active">
                         <i class = "fas fa-dollar-sign me-2"> </i> Income Reports
                     </a>
@@ -70,7 +73,7 @@
         <div id = "page-content-wrapper">
             <nav class = "navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                 <div class = "d-flex align-items-center"> 
-                    <h2 class = "fs-2 m-0"> Tenant's Profile </h2>
+                    <h2 class = "fs-2 m-0"> Manage Tenant </h2>
                 </div>
 
                 <div class = "navbar-collapse">
@@ -95,9 +98,22 @@
             <!--<div class = "table-container">
 
             <div class="search_wrap search_wrap_1">
+
+                <?php
+                    include "dbconn.php";
+
+                    if (isset($_POST['searchbutton'])) {
+                        $searchKey = $_POST['search'];
+                        $sql = "SELECT * FROM users WHERE name LIKE '%$searchKey%'";
+                    } else {
+                        $sql = "SELECT * FROM users";
+
+                        $result = mysqli_query($conn, $sql);
+                    }
+                ?>
                     <div class="search_box">
-                        <input type="text" class="input" placeholder="Search....">
-                        <div class="btn btn_common">
+                        <input name = "search" type="text" class="input" placeholder="Search....">
+                        <div class="btn btn_common searchbutton">
                             <i class="fas fa-search" style="font-size:20px"></i>
                         </div>
                     </div>
@@ -151,10 +167,22 @@
                     </tr>
                 </thead>    
                 <tbody>
-                <?php
+                    <?php
                             include "dbconn.php";
+                            
+                            if(isset($_GET['page']) && $_GET['page'] !== "") {
+                                $page = $_GET['page'];
+                            } else {
+                                $page = 1;
+                            }
 
-                            $sql = "SELECT * FROM tenant_acc";
+                            $limit = 7;
+                            $offset = ($page - 1) * $limit;
+
+                            $previous = $page - 1;
+                            $next = $page + 1;
+
+                            $sql = "SELECT * FROM tenant_acc LIMIT $offset, $limit";
                             $result = mysqli_query($conn, $sql);
 
                             while ($row = mysqli_fetch_assoc($result)) {
@@ -178,16 +206,53 @@
                 </tbody>  
             </table>
             <div class="clearfix">
+            
                 <ul class="pagination">
-                    <li class="page-item"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
-                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>                    
+                    <?php
+
+                    $query =  "SELECT COUNT(*) FROM tenant_acc";
+                    $result_count = mysqli_query($conn, $query);
+                    $records = mysqli_fetch_row($result_count);
+                    $total_records = $records[0];
+
+                    $total_pages = ceil($total_records / $limit);
+                    $link = "";
+
+                    ?>
+                
+
+                    <?php
+                        if ($page >= 2) {
+                            echo "<li class = 'page-item'>
+                            <a class = 'page-link' href = 'tenantProfile.php?page=".($page-1)."'> 
+                            <i class = 'fa fa-angle-double-left'> </i> </a> </li>";
+                        }
+
+                         for ($counter = 1; $counter <= $total_pages; $counter++){
+                            if ($counter == $page) {
+                                $link .= "<li class = 'page-item active'>
+                                <a class = 'page-link' href= 'tenantProfile?page="
+                                .$counter."'>".$counter." </a></li>";
+                            } else {
+                                $link .= "<li class = 'page-item'>
+                                <a class = 'page-link' href='tenantProfile.php?page=".$counter."'> ".$counter." </a> </li>";
+                            }
+                        };
+
+                        echo $link;
+
+                        if($page < $total_pages) {
+                            echo "<li class = 'page-item'>
+                            <a class = 'page-link' href='tenantProfile.php?page=".($page+1)."'>
+                            <i class = 'fa fa-angle-double-right'></i> </a></li>";
+                        }
+                    ?>
+
+                    <div class="hint-text">Showing <b> <?= $page; ?> </b> out of <b> <?= $total_pages; ?></b> page</div>
                 </ul>
             </div>
+
+            
     
         </div>
     </div>  
