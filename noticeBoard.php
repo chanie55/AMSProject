@@ -48,9 +48,9 @@
                         <i class = "fas fa-commenting me-2"> </i> Suggestion From Tenants
                     </a>
                     <a href = "invoice.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-file-invoice-dollar me-2"> </i> Invoice
+                        <i class = "fas fa-file-invoice-dollar me-2"> </i> Statement of Account
                     </a>
-                    <a href = "invoice.php" class = "list-group-item second-text active">
+                    <a href = "paymentSent.php" class = "list-group-item second-text active">
                         <i class = "fas fa-file-invoice-dollar me-2"> </i> Payment Sent by Tenants
                     </a>
                     <a href = "collectibles.php" class = "list-group-item second-text active">
@@ -241,10 +241,6 @@
         </div>
         
     </div>
-<<<<<<< HEAD
-
-         
-=======
         
     <div class="overlay" id = "popup-msg">
         <div class="popup" id = "popup">
@@ -267,6 +263,5 @@
         document.getElementById("popup").style.display = "none";
     }
 </script>
->>>>>>> aad2a0e4e780542ace93c605e47bfc97112817ab
     </body>
 </html>
