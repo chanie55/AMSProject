@@ -6,9 +6,10 @@ if (isset($_POST['add-room'])){
     $roomno = $_POST['roomno'];
     $bedno = $_POST['bedno'];
     $monthly = $_POST['monthly'];
+    $startdate = $_POST['startdate'];
 
-    $sql = "INSERT INTO room_acc(name, roomno, bedno, monthly)
-    VALUES ('$name', '$roomno', '$bedno', '$monthly')";
+    $sql = "INSERT INTO room_acc(name, roomno, bedno, monthly, startdate)
+    VALUES ('$name', '$roomno', '$bedno', '$monthly', '$startdate')";
 
     $result = mysqli_query($conn, $sql);
 

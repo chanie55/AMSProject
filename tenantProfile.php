@@ -95,7 +95,7 @@
                 </div>
             </nav>
 
-            <!--<div class = "table-container">
+            <div class = "table-container">
 
             <div class="search_wrap search_wrap_1">
 
