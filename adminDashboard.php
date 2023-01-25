@@ -104,7 +104,7 @@ session_start();
                                 <?php
                                     include "dbconn.php";
 
-                                    $tenants_query = "SELECT * FROM tenant_profile";
+                                    $tenants_query = "SELECT * FROM tenant_acc";
                                     $tenants_query_num = mysqli_query($conn, $tenants_query);
 
                                     if ($tenants_total = mysqli_num_rows($tenants_query_num)) {

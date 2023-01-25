@@ -121,6 +121,7 @@
                       </div>
                  </div>
                 </div>
+            
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
@@ -183,7 +184,7 @@
                      <span class="slider round"></span>
 
                      </label>
-                     <b><label id="label-Active" class="label-active-in"></label><b>
+                     <b><label id="label-Active" class="label-active-in">Inactive</label><b>
 
                      <style>
                         .label-active-in{

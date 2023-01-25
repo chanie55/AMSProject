@@ -80,6 +80,60 @@ session_start();
 
                 </div>
             </nav>
+
+            <style>
+                .col{
+                    padding: 20px;
+                    display: flex;
+                    column-gap: 10px;
+                    row-gap: 10px;
+                    flex-wrap: wrap;
+                }
+                .cont{
+                    background: #ddd;
+                    padding: 20px;
+                    width: 300px;
+                    height: 200px;
+                    border-radius: 10px;
+                    box-shadow: 1px 1px 3px 0px black;
+                }
+                .cont2{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                }
+            </style>
+            <div class="col">
+                <div class="cont">
+                    <div class="cont2">
+                        <div class="name">
+                            Mica
+                        </div>
+                        <div class="date" style="text-align: right;">
+                            2023, 01, 15
+                        </div>
+                    </div><br>
+                    <div>
+                        Notes:
+                        <p>sss</p>
+                    </div>
+                </div>
+                
+                <div class="cont">
+                    <div class="cont2">
+                        <div class="name">
+                            Mica
+                        </div>
+                        <div class="date" style="text-align: right;">
+                            2023, 01, 15
+                        </div>
+                    </div><br>
+                    <div>
+                        Notes:
+                        <p>sss</p>
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </div>
         

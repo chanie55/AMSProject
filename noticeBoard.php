@@ -108,7 +108,7 @@
       <form>
             <div class ="label">   
             <label for="fname">Name:&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-            <input type="text" id="fname" name="fname"><br><br>
+            <input type="text" id="name" name="name"><br><br>
             </div>
 
             <div class="label">
@@ -118,20 +118,19 @@
   
             <div class ="label"> 
             <label for="ftitle">Title:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-            <input type="text" id="ftitle" name="ftitle"><br><br>
+            <input type="text" id="titile" name="title"><br><br>
             </div>
 
             <div class="label">
             <label for="lname">Content:</label>
-            <textarea id="fcontent" name="fcontent" rows="4" cols="50"></textarea>
+            <textarea id="content" name="content" rows="4" cols="50"></textarea>
             </div>
-           
-
             </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Post</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" name="notice-db">Post</button>
       </div>
+
 
      <!-- <div class="modal-footer">
         <form method="POST" class="btn btn-secondary" data-bs-dismiss="modal" action="noticeBoard.php"> </form>
@@ -152,32 +151,7 @@
                 document.getElementById("modal").style.display = "none";
             }
         </script>
-                       <!--Notice Board-->
-        <!--
-            <div class="myDiv">
-            <form>
-            <div class ="label">   
-            <label for="fname">Name:&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-            <input type="text" id="fname" name="fname"><br><br>
-            </div>
-
-            <div class ="label"> 
-            <label for="lname">Date:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-            <input type="text" id="fdate" name="fdate"><br><br>
-            </div>
-
-            <div class ="label"> 
-            <label for="ftitle">Title:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-            <input type="text" id="ftitle" name="ftitle"><br><br>
-            </div>
-
-            <div class="label">
-            <label for="lname">Content:</label>
-            <textarea id="fcontent" name="fcontent" rows="4" cols="50"></textarea>
-            </div>
-            <input type="post" value="Post" float = right;> 
-
-            </form> -->
+                    
             <style>
                 .col{
                     padding: 20px;
@@ -199,38 +173,18 @@
                     grid-template-columns: 1fr 1fr;
                 }
             </style>
-            <div class="col">
-                <div class="cont">
-                    <div class="cont2">
-                        <div class="name">
-                            Mica
-                        </div>
-                        <div class="date" style="text-align: right;">
-                            2023, 01, 15
-                        </div>
-                    </div><br>
-                    <div>
-                        Notes:
-                        <p>sss</p>
-                    </div>
-                </div>
-                
-                <div class="cont">
-                    <div class="cont2">
-                        <div class="name">
-                            Mica
-                        </div>
-                        <div class="date" style="text-align: right;">
-                            2023, 01, 15
-                        </div>
-                    </div><br>
-                    <div>
-                        Notes:
-                        <p>sss</p>
-                    </div>
-                </div>
-                
-            </div>
+          
+                            
+                    
+                        
+                        <!-- <button class="btn-success" id="myText" onclick="myFunction()">Active</button>
+                        <script>
+                        
+                      
+                        function myFunction() {
+                        document.getElementById("myText").Name = "Inactive";    
+                        
+                        
 
 
             </div>
@@ -262,6 +216,6 @@
         document.getElementById("popup-msg").style.display = "none";
         document.getElementById("popup").style.display = "none";
     }
-</script>
+</script>-->
     </body>
 </html>

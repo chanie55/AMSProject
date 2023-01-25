@@ -128,13 +128,12 @@
                 <tbody>
                     <tr>
                         <td>Jv Watapampa XD</td>
-                        <td>420</td>
-                        <td>69</td>
-                        <td>15000$</td>
+                        <td>Jv's Room</td>
+                        <td>01/01/2023</td>
+                        <td>Declined</td>
                         <td>Active</td>
                         <td>
                             <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                     </tr>       
                 </tbody>
@@ -142,13 +141,12 @@
                 <tbody>
                     <tr>
                         <td>Jv Watapampa XD</td>
-                        <td>420</td>
-                        <td>69</td>
-                        <td>15000$</td>
+                        <td>Jv's Water bill</td>
+                        <td>01/01/2023</td>
+                        <td>Pending</td>
                         <td>Active</td>
                         <td>
                             <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                     </tr>       
                 </tbody>
@@ -156,12 +154,12 @@
                 
             </table>
             <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                <div class="hint-text">Showing <b>1</b> out of <b>1</b> entries</div>
                 <ul class="pagination">
                     <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
                     <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
                     <li class="page-item"><a href="#" class="page-link">4</a></li>
                     <li class="page-item"><a href="#" class="page-link">5</a></li>
                     <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
