@@ -152,6 +152,8 @@
                     $sql = "SELECT * FROM room_acc LIMIT $offset, $limit";
                     $result = mysqli_query($conn, $sql);
 
+                    
+
                   while ($row = mysqli_fetch_assoc($result)) {
                     ?>
                     <tr class="data-row">
@@ -177,11 +179,29 @@
 
                      
                     <label class="switch">
-                     <input type="checkbox" >
+                     <input type="checkbox" id="myCheck" onclick="myFunction()">
                      <span class="slider round"></span>
 
                      </label>
+                     <b><label id="label-Active" class="label-active-in"></label><b>
+
+                     <style>
+                        .label-active-in{
+                            
+                        }
+                     </style>
                 <!-- <button onclick="myFunction()">Try it</button> -->
+                <script>
+function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("label-Active");
+  if (checkBox.checked == true){
+    text.innerHTML = "Active";
+  } else {
+    text.innerHTML = "Inactive";
+  }
+}
+</script>
 
                     </td>
            
