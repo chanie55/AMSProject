@@ -179,32 +179,21 @@ $(document).ready(function(){
 
     <div class="overlay1" id = "openAdd">
         <div class="popup1" id = "popupAdd">
-            <p class = "formHeader">Add Room Details</p>
+            <p class = "formHeader">Add Payment</p>
             <form method="post" id="contactFrm">
                 <div class="modal-body">
                     <div class="response"></div>
                     <div class="form-group">
-                        <label>Name:</label>
+                        <label>Date</label>
                         <input type="text" name="username" id="username" class="form-control" required="">
                     </div>
                     <div class="form-group">
-                        <label>Room No.:</label>
+                        <label>Amount:</label>
                         <input type="text" name="firstname" id="firstname" class="form-control" required="">
                     </div>
                     <div class="form-group">
-                        <label>Bed No.:</label>
+                        <label>Upload Proof of Payment:</label>
                         <input type="text" name="lastname" id="lastname" class="form-control" required="">
-                    </div>
-                    <div class="form-group">
-                        <label>Monthly Rate:</label>
-                        <input type="text" name="mr" id="mr" class="form-control" required="">
-                    </div> <br>
-                    <div class="form-group">
-                        <label for = "status">Status:</label>
-                        <select name = "status" id = "status"> 
-                            <option class = "combo-status" value = "Active"> Active </option>
-                            <option class = "combo-status" value = "Inactive"> Inactive </option>
-                        </select>
                     </div>
                     <br>
                     </form>

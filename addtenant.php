@@ -6,10 +6,10 @@ if (isset($_POST['submit-tenant'])) {
     $first_name = $_POST['firstname'];
     $last_name = $_POST['lastname'];
     $password = $_POST['password'];
-    $conNum = $_POST['conNum'];
+    $contactNo = $_POST['contactNo'];
 
-    $sql = "INSERT INTO tenant_acc(username, firstname, lastname, password, conNum)
-                VALUES ('$user_name', '$first_name', '$last_name', '$password', '$conNum')";
+    $sql = "INSERT INTO tenant_profile(username, firstname, lastname, password, contactNo)
+                VALUES ('$user_name', '$first_name', '$last_name', '$password', '$contactNo')";
 
     $result = mysqli_query($conn, $sql);
 
