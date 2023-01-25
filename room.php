@@ -201,19 +201,7 @@ function myFunction() {
     text.innerHTML = "Inactive";
   }
 }
-</script>
-
-                    </td>
-                    <td>
-                    <a href="#" onclick="openAdd()"> <button class="editPen fa fa-pencil"></button></a>
-                    
-                    </td>
-                          
-                            
-                    </tr>
-
-                    
-                    
+</script>        
                     <?php
                   }
 
