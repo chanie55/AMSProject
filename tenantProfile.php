@@ -163,7 +163,7 @@
                             $previous = $page - 1;
                             $next = $page + 1;
 
-                            $sql = "SELECT contactNo, CONCAT(firstname,' ', lastname) AS fullName FROM tenant_profile LIMIT $offset, $limit";
+                            $sql = "SELECT contactNo, CONCAT(firstname,' ', lastname) AS fullName FROM tenant_acc LIMIT $offset, $limit";
                             $result = mysqli_query($conn, $sql);
 
                             while ($row = mysqli_fetch_assoc($result)) {
@@ -189,8 +189,8 @@
             
                 <ul class="pagination">
                     <?php
-
-                    $query =  "SELECT COUNT(*) FROM tenant_profile";
+            
+                    $query =  "SELECT COUNT(*) FROM tenant_acc";
                     $result_count = mysqli_query($conn, $query);
                     $records = mysqli_fetch_row($result_count);
                     $total_records = $records[0];

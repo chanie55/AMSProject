@@ -6,9 +6,10 @@ if (isset($_POST['add-utility'])) {
     $water = $_POST['water'];
     $electricity = $_POST['electricity'];
     $rate = $_POST['rate'];
+     $date = $_POST['date'];
 
-    $sql = "INSERT INTO utility_bills(name, water, electricity, rate)
-    VALUES ('$name', '$water', '$electricity', '$rate')";
+    $sql = "INSERT INTO utility_bills(name, water, electricity, rate, date)
+    VALUES ('$name', '$water', '$electricity', '$rate', '$date')";
 
     $result = mysqli_query($conn, $sql);
 
