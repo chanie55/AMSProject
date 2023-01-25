@@ -179,6 +179,7 @@
                                         </td>
                                     </tr>
                                 <?php
+
                             }
                         ?> 
                 </tbody>  
@@ -193,6 +194,8 @@
                     $result_count = mysqli_query($conn, $query);
                     $records = mysqli_fetch_row($result_count);
                     $total_records = $records[0];
+
+                    
 
                     $total_pages = ceil($total_records / $limit);
                     $link = "";
