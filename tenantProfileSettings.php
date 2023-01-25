@@ -14,7 +14,7 @@
               <div class="d-flex flex-column align-items-center text-center p-2 py-3">
                 <img class="rounded-circle mt-0" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
                 <div class="mt-0 text-center">
-                  <button class="btn btn-primary profile-button p-1.5 mb-2" type="button" style="font-size: 11px;">Upload Image</button>
+                  <button class="btn btn-secondary profile-button p-1.5 mb-2" type="button" style="font-size: 11px;">Upload Image<input type="file"></button>
                 </div>
                 <span class="font-weight-bold" style="font-size: 18px;">Elmer Watapampam</span>
                 <span class="text-black-50">elmer_watapampa@gmail.com</span><span> </span>
@@ -39,7 +39,9 @@
                       <div class="col-md-6"><label class="labels">Gender</label><input type="text" class="form-control" placeholder=" " value=""></div>
                       <div class="col-md-6"><label class="labels">Birthdate</label><input type="text" class="form-control" value="" placeholder=" "></div>
                   </div>
-                  <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                  <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Update</button>
+                  <a href="tenantDashboard.php"><button class="btn btn-primary profile-button" type="button">Cancel</button></a>
+                </div>
               </div>
           </div>
       </div>
