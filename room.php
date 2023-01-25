@@ -130,7 +130,7 @@
                         <th scope="col">Monthly Rate </th>
                         <th scope="col">Start Date </th>
                         <th scope="col">Status </th>
-                        <th scope="col">Actions</th>
+                       
                     </tr>
                 </thead>    
                 <tbody>
@@ -184,10 +184,7 @@
                 <!-- <button onclick="myFunction()">Try it</button> -->
 
                     </td>
-                    <td>
-                    <a href="#" onclick="openAdd()"> <button class="editPen fa fa-pencil"></button></a>
-                    
-                    </td>
+           
                           
                             
                     </tr>

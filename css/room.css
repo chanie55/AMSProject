@@ -401,9 +401,9 @@ table.table td i {
   }
   
   input:checked + .slider:before {
-    -webkit-transform: translateX(30px);
-    -ms-transform: translateX(30px);
-    transform: translateX(30px);
+    -webkit-transform: translateX(35px);
+    -ms-transform: translateX(35px);
+    transform: translateX(35px);
   }
   
   /* Rounded sliders */
