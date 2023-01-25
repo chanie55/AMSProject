@@ -102,40 +102,17 @@
                 <?php
                     include "dbconn.php";
 
-                    if (isset($_POST['searchbutton'])) {
+                    if (isset($_POST['form-control'])) {
                         $searchKey = $_POST['search'];
-                        $sql = "SELECT * FROM users WHERE name LIKE '%$searchKey%'";
+                        $sql = "SELECT * FROM users WHERE firstname LIKE '%$searchKey%'";
                     } else {
                         $sql = "SELECT * FROM users";
 
                         $result = mysqli_query($conn, $sql);
                     }
                 ?>
-                    <div class="search_box">
-                        <input name = "search" type="text" class="input" placeholder="Search....">
-                        <div class="btn btn_common searchbutton">
-                            <i class="fas fa-search" style="font-size:20px"></i>
-                        </div>
-                    </div>
-                </div>
-                            
-                <a href="#" class = "btn btn-add mb-5" id = "modal-button" onclick = "openAdd()"> 
-                    <i class="fa fa-user-plus" style="font-size:23px;float:left"></i> Add New 
-                </a>
-
-                <div class = "table-border">
-                <table class = "table text-center">
-                    <thread>
-                        <tr class = "table-header">
-                            <th scope = "col"> Firstname</th>
-                            <th scope = "col"> LastName </th>
-                            <th scope = "col"> Contact No. </th>
-                            <th scope = "col"> Action </th>
-                        </tr> 
-                    </thread>
-                    <tbody> -->
-
-                         <!-- ADD NEW BUTTON --> 
+                    
+                          ADD NEW BUTTON --> 
             <div class="margin">   
             <a href="#" class = "btn btn-add mb-5" onclick = "openAdd()"> 
                     <i class="fa fa-user-plus"style="font-size:23px;float:left" ></i> Add New 
@@ -160,8 +137,7 @@
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
-                        <th scope="col">First Name</th>
-                        <th scope="col">Last Name</th>
+                        <th scope="col">Name</th>
                         <th scope="col">Contact No.</th>
                         <th scope="col">Actions</th>
                     </tr>
@@ -182,21 +158,17 @@
                             $previous = $page - 1;
                             $next = $page + 1;
 
-                            $sql = "SELECT * FROM tenant_acc LIMIT $offset, $limit";
+                            $sql = "SELECT contactNo, CONCAT(firstname,' ', lastname) AS fullName FROM tenant_profile LIMIT $offset, $limit";
                             $result = mysqli_query($conn, $sql);
 
                             while ($row = mysqli_fetch_assoc($result)) {
                                 ?>
                                     <tr class = "data-row"> 
-                                        <td> <?php echo $row['firstname'] ?> </td>
-                                        <td> <?php echo $row['lastname'] ?> </td>
-                                        <td> <?php echo $row['conNum'] ?> </td>
+                                        <td> <?php echo $row['fullName'] ?> </td>
+                                        <td> <?php echo $row['contactNo'] ?> </td>
                                         <td>
                                             <a href = "#" class = "action-icon link-dark">
                                             <i class = "fa-solid fa-eye fs-5 me-3"> </i>
-                                            </a>
-                                            <a hre  f = "" class = "action-icon link-dark" >
-                                            <i class = "fa-solid fa-trash fs-5"></i>
                                             </a> 
                                         </td>
                                     </tr>
@@ -210,7 +182,7 @@
                 <ul class="pagination">
                     <?php
 
-                    $query =  "SELECT COUNT(*) FROM tenant_acc";
+                    $query =  "SELECT COUNT(*) FROM tenant_profile";
                     $result_count = mysqli_query($conn, $query);
                     $records = mysqli_fetch_row($result_count);
                     $total_records = $records[0];
@@ -306,7 +278,7 @@ $(document).ready(function(){
                     </div>
                     <div class="form-group">
                         <label>Contact Number:</label>
-                        <input type="text" name="conNum" id="conNum" class="form-control" pattern="[0-9]*"  required="">
+                        <input type="text" name="contactNo" id="contactNo" class="form-control" pattern="[0-9]*"  required="">
 
                     </div>
                     <br>

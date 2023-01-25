@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 20, 2023 at 01:37 AM
+-- Generation Time: Jan 24, 2023 at 11:11 PM
 -- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -50,18 +50,18 @@ CREATE TABLE `room_acc` (
   `name` varchar(99) NOT NULL,
   `roomno` double NOT NULL,
   `bedno` double NOT NULL,
-  `monthly` double NOT NULL
+  `monthly` double NOT NULL,
+  `startdate` varchar(99) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `room_acc`
 --
 
-INSERT INTO `room_acc` (`name`, `roomno`, `bedno`, `monthly`) VALUES
-('asd', 213.12, 123.123, 123.1),
-('asd', 0, 0, 0),
-('asd', 0, 0, 0),
-('asd', 0, 0, 0);
+INSERT INTO `room_acc` (`name`, `roomno`, `bedno`, `monthly`, `startdate`) VALUES
+('Meka', 23, 5, 46464, '2023-01-25'),
+('Jv', 2, 12, 201, '2023-01-28'),
+('Elmer', 2, 1, 150.5, '2023-01-23');
 
 -- --------------------------------------------------------
 
@@ -124,7 +124,8 @@ CREATE TABLE `utility_bills` (
 --
 
 INSERT INTO `utility_bills` (`name`, `water`, `electricity`, `rate`) VALUES
-('asd', 123, 123, 123);
+('asd', 123, 123, 123),
+('Jv', 23, 13, 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
