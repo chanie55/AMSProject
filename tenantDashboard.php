@@ -51,6 +51,7 @@ session_start();
                     <a href = "tenantSuggestion.php" class = "list-group-item second-text active">
                         <i class = "fas fa-commenting me-2"> </i> Suggestion
                     </a>
+
                 </div>
             </div>
 
