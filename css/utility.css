@@ -137,12 +137,14 @@
 .dropdown-item:hover {
     background-color: white;
 }
-
+.container-xl{
+    margin-top: 100px;
+}
 
 .btn-add {
     background-color: #a1f8a4;
-    margin-left: 88px;
-    margin-top: 15px;
+    margin-left: 52px;
+    margin-top: 10px;
     font-weight: bold;
     color: #2f3031;
 }
@@ -250,6 +252,7 @@
     background: #fff;
     padding: 20px;
     box-shadow: 0 1px 1px 1px rgba(0,0,0,.2);
+   
 }
 
 .search-box {

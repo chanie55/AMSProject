@@ -88,7 +88,7 @@ session_start();
                     <div class = "col-md-4 box-width">
                         <div class = "p-3 bg-white border = 2 shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div> 
-                                <h3 class = "fs-2"> 2500</h3>
+                                <h3 class = "fs-2"> ₱4,879.25</h3>
                                 <p class = "fs-5 box"> Balance </p>
                             </div> 
                             <i class = "fas fa-coins fs-1 primary-text border rounded-full secondary-bg p-3"></i>
@@ -98,7 +98,7 @@ session_start();
                     <div class = "col-md-4 box-width">
                         <div class = "p-3 bg-white border = 2 shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div> 
-                                <h3 class = "fs-2"> 20000</h3>
+                                <h3 class = "fs-2">₱4,879.25</h3>
                                 <p class = "fs-5 box"> Payments </p>
                             </div> 
                             <i class = "fas fa-money-check fs-1 primary-text border rounded-full secondary-bg p-3"></i>

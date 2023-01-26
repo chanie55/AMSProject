@@ -127,8 +127,8 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Jv Watapampa XD</td>
-                        <td>Jv's Room</td>
+                        <td>Khytryn Faye Carcillar</td>
+                        <td>Room Light</td>
                         <td>01/01/2023</td>
                         <td>Declined</td>
                         <td>Active</td>
@@ -140,8 +140,8 @@
 
                 <tbody>
                     <tr>
-                        <td>Jv Watapampa XD</td>
-                        <td>Jv's Water bill</td>
+                        <td>Beverly Jane Gicale</td>
+                        <td>Water leakage</td>
                         <td>01/01/2023</td>
                         <td>Pending</td>
                         <td>Active</td>

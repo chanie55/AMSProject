@@ -1,32 +1,4 @@
-<?php
-include "dbconn.php";
 
-    if(isset($_REQUEST['pwdrst'])) {
-        $email = $_REQUEST['email'];
-        $pwd = md5($_REQUEST['pwd']);
-        $cpwd = md5($_REQUEST['cpwd']);
-            if ($pwd == $cpwd) {
-
-                $sql = "UPDATE TenantAccount SET password = '$pwd' WHERE email = '$email'";
-                $reset_pwd = mysqli_query($conn, $sql);
-
-                    if ($reset_pwd > 0) {
-                        $msg = 'Your password updated successfully;
-                        <a href = "index.php"> Click Here </a>
-                        to login ';
-                    } else {
-                        $msg = "Error while updating password.";
-                    }
-            }
-    } else {
-        $msg = "Password and Confirm Password do not match";
-    }
-
-    if($_GET['secret']) {
-        $email = base64_decode($_GET['secret']);
-        $check_details = mysqli_query($conn, "SELECT email FROM TenantAccount WHERE email = '$email'");
-        $res = mysqli_num_rows($check_details);
-            if($res > 0) { ?>
 
 <!DOCTYPE html>
 <html>
@@ -71,16 +43,12 @@ include "dbconn.php";
             	</div>
             	<input type="submit" id = "login" class="btn btn-success" value="Submit" name = "pwdrst">
                 <p class = "error">
-			        <?php
-				        if(!empty($msg)) {
-					        echo $msg;
-				        }
-			        ?>
+			        
 		        </p>
             </form>
         </div>
     </div>
-<?php } } ?>
+
     <script src="js/index.js"></script>
 </body>
 </html>

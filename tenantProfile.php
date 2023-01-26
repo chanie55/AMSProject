@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -195,7 +194,7 @@
                     $records = mysqli_fetch_row($result_count);
                     $total_records = $records[0];
 
-                    
+
 
                     $total_pages = ceil($total_records / $limit);
                     $link = "";

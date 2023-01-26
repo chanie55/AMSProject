@@ -80,6 +80,59 @@ session_start();
 
                 </div>
             </nav>
+             <!-- ADD NEW BUTTON --> 
+        <div class="margin">   
+            <a href="#" class = "btn btn-add mb-5" onclick = "openAdd()"> 
+                    <i class="fa fa-user-plus"style="font-size:23px;float:left" ></i> Add New 
+                </a>
+            </div>
+        <!-- TABLE -->
+    <div class="container-xl">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="search-box">
+                            <i class="material-icons">&#xE8B6;</i>
+                            <input type="text" class="form-control" placeholder="Search&hellip;">
+                        </div>
+                    </div>
+                 </div>
+            <table class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Balance</th>
+                        <th>Total Payment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01/18/2023</td>
+                        <td>₱4,879.25</td>
+                        <td>₱0.00</td>
+                        <td>₱4,879.25</td>
+                    </tr>       
+                </tbody>
+
+                
+            </table>
+            <div class="clearfix">
+                <div class="hint-text">Showing <b>1</b> out of <b>1</b> entries</div>
+                <ul class="pagination">
+                    <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                    <li class="page-item"><a href="#" class="page-link">5</a></li>
+                    <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>  
+</div>
         </div>
     </div>
         

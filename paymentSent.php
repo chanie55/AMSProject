@@ -118,28 +118,28 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Jv Watapampa XD</td>
-                        <td>420</td>
-                        <td>69</td>
-                        <td>15000$</td>
-                        <td>Active</td>
+                        <td>Khytryn Faye Carcillar</td>
+                        <td>01/18/2023</td>
+                        <td>Reciept Screenshot</td>
+                        <td>Acknowledged</td>
+                        <td>Paid</td>
                         <td>
                             <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+
                         </td>
                     </tr>       
                 </tbody>
 
                 <tbody>
                     <tr>
-                        <td>Jv Watapampa XD</td>
-                        <td>420</td>
-                        <td>69</td>
-                        <td>15000$</td>
-                        <td>Active</td>
+                        <td>Beverly Jane Gicale</td>
+                        <td>01/17/2023</td>
+                        <td>Reciept Screenshot</td>
+                        <td>Acknowledged</td>
+                        <td>Paid</td>
                         <td>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            <a href="#" class="edit" title="Edit" data-toggle="tooltip" ><i class="material-icons">&#xE254;</i></a>
+
                         </td>
                     </tr>       
                 </tbody>

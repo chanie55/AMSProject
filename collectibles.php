@@ -72,7 +72,7 @@
         <div id = "page-content-wrapper">
             <nav class = "navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                 <div class = "d-flex align-items-center"> 
-                    <h2 class = "fs-2 m-0"> Collectibles </h2>
+                    <h2 class = "fs-2 m-0"> Income </h2>
                 </div>
 
                 <div class = "navbar-collapse">
@@ -119,33 +119,33 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Jv Watapampa XD</td>
-                        <td>420</td>
-                        <td>69</td>
-                        <td>15000$</td>
-                        <td>Active</td>
+                        <td>Khytryn Faye Carcillar</td>
+                        <td>4</td>
+                        <td>₱4,879.25</td>
+                        <td>₱4,879.25</td>
+                        <td>Paid</td>
                     </tr>       
                 </tbody>
 
                 <tbody>
                     <tr>
-                        <td>Jv Watapampa XD</td>
-                        <td>420</td>
-                        <td>69</td>
-                        <td>15000$</td>
-                        <td>Active</td>
+                        <td>Beverly Jane Gicale</td>
+                        <td>2</td>
+                        <td>₱6,909.25</td>
+                        <td>₱6,909.25</td>
+                        <td>Paid</td>
                     </tr>       
                 </tbody>
 
                 
             </table>
             <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                <div class="hint-text">Showing <b>1</b> out of <b>1</b> entries</div>
                 <ul class="pagination">
                     <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
                     <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
                     <li class="page-item"><a href="#" class="page-link">4</a></li>
                     <li class="page-item"><a href="#" class="page-link">5</a></li>
                     <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>

@@ -256,11 +256,11 @@ $(document).ready(function(){
                     </div>
                     <div class="form-group">
                         <label>Electricity Bill:</label>
-                        <input type="text" name="electricity" id="electricity" class="form-control" pattern="[0-9]+([\.,][0-9]+)?" required="">
+                        <input type="text" name="electricity" id="electricity" placeholder="KWH" class="form-control" pattern="[0-9]+([\.,][0-9]+)?" required="">
                     </div>
                     <div class="form-group">
-                        <label>Monthly Rate:</label>
-                        <input type="text" name="rate" id="rate" class="form-control" pattern="[0-9]+([\.,][0-9]+)?" required="">  
+                        <label>Rate:</label>
+                        <input type="text" name="rate" id="rate" placeholder="PHP/KWH" class="form-control" pattern="[0-9]+([\.,][0-9]+)?" required="">  
                     </div>
                     <div class="form-group">
                         <label>Date:</label>
