@@ -234,8 +234,18 @@ $(document).ready(function(){
                     <div class = "form-group">
                         <label> Pick Tenant:</label>
                         <select name = "name" id = "name">
-                            <option> Elmer Varquez</option>
-                            <option> Jv Laroco</option>
+                            <?php
+                            include "dbconn.php";
+                            
+                            $name_query = "SELECT CONCAT(firstname,' ', lastname) AS fullName FROM tenant_acc";
+                            $r = mysqli_query($conn, $name_query);
+
+                            while ($row = mysqli_fetch_array($r)) {
+                                ?>
+                                <option> <?php echo $row['fullName']; ?></option>
+                            <?php
+                            }
+                            ?>
                                 </select>
                         <br>
                     <div class="form-group">

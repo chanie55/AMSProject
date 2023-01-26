@@ -201,7 +201,12 @@ function myFunction() {
     text.innerHTML = "Inactive";
   }
 }
-</script>        
+</script>
+
+               
+
+                    
+                    
                     <?php
                   }
 
@@ -285,8 +290,21 @@ $(document).ready(function(){
                 <div class="modal-body">
                     <div class="response"></div>
                     <div class="form-group">
-                        <label>Name:</label>
-                        <input type="text" name="name" id="name" class="form-control" pattern="[A-Za-z]{1,}" required="">
+                    <label> Pick Tenant:</label>
+                        <select name = "name" id = "name">
+                            <?php
+                            include "dbconn.php";
+                            
+                            $name_query = "SELECT CONCAT(firstname,' ', lastname) AS fullName FROM tenant_acc";
+                            $r = mysqli_query($conn, $name_query);
+
+                            while ($row = mysqli_fetch_array($r)) {
+                                ?>
+                                <option> <?php echo $row['fullName']; ?></option>
+                            <?php
+                            }
+                            ?>
+                                </select>
                     </div>
                     <div class="form-group">
                         <label>Room No.:</label>
