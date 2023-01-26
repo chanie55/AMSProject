@@ -118,7 +118,8 @@
                     <th scope="col"> Water </th>
                     <th scope="col"> Electricity </th>
                     <th scope="col"> Rate </th>
-                    <th scope="col"> Action </th>
+                    <th scope="col"> Date </th>
+
                    </tr>
                 </thead> 
                 <tbody>     
@@ -147,14 +148,8 @@
                         <td> <?php echo $row['water'] ?> </td>
                         <td> <?php echo $row['electricity'] ?> </td>
                         <td> <?php echo $row['rate'] ?> </td>
-                        <td>
-                        <a href = "#" class = "action-icon link-dark">
-                            <i class = "fa-solid fa-eye fs-5 me-3"> </i>
-                            </a>
-                            <a hre  f = "" class = "action-icon link-dark" >
-                            <i class = "fa-solid fa-trash fs-5"></i>
-                            </a> 
-                            </td>
+                        <td> <?php echo $row['date'] ?> </td>
+                       
                     </tr>
                         <?php
                     }
@@ -230,19 +225,24 @@ $(document).ready(function(){
         </div>
     </div>
 
-    <div class="overlay1" id = "openAdd">
-        <div class="popup1" id = "popupAdd">
-            <p class = "formHeader">Add Room Details</p>
-            <form method="post" id="contactFrm" action="utilitydb.php">
-                <div class="modal-body">
-                    <div class="response"></div>
+    <div class = "overlay1" id = "openAdd">
+        <div class = "popup1" id = "popupAdd">
+            <p class = "formHeader"> Utility Bills</p>
+            <form method = "post" id = "contactFrm" action = "utilitydb.php">
+                <div class = "modal-body">
+                    <div class ="response"></div>
+                    <div class = "form-group">
+                        <label> Pick Tenant:</label>
+                        <select name = "name" id = "name">
+                            <option> Elmer Varquez</option>
+                            <option> Jv Laroco</option>
+                                </select>
+                        <br>
                     <div class="form-group">
-                        <label>Name:</label>
-                        <input type="text" name="name" id="name" class="form-control" pattern="[A-Za-z]{1,}" required="">
-                    </div>
+                 
                     <div class="form-group">
                         <label> Water Bill:</label>
-                        <input type="text" name="water" id="water" class="form-control" pattern="[0-9]+([\.,][0-9]+)?" required="">
+                        <input type="text" name="water" id="water" readonly value= "210.25" class="form-control" pattern="[0-9]+([\.,][0-9]+)?" required="">
                     </div>
                     <div class="form-group">
                         <label>Electricity Bill:</label>
@@ -252,6 +252,11 @@ $(document).ready(function(){
                         <label>Monthly Rate:</label>
                         <input type="text" name="rate" id="rate" class="form-control" pattern="[0-9]+([\.,][0-9]+)?" required="">  
                     </div>
+                    <div class="form-group">
+                        <label>Date:</label>
+                        <input type="date" name="date" id="date" class="form-control" required="">  
+                    </div>
+
                     <br>
                     </form>
             <div class="text-right">

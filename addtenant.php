@@ -8,7 +8,7 @@ if (isset($_POST['submit-tenant'])) {
     $password = $_POST['password'];
     $contactNo = $_POST['contactNo'];
 
-    $sql = "INSERT INTO tenant_profile(username, firstname, lastname, password, contactNo)
+    $sql = "INSERT INTO tenant_acc(username, firstname, lastname, password, contactNo)
                 VALUES ('$user_name', '$first_name', '$last_name', '$password', '$contactNo')";
 
     $result = mysqli_query($conn, $sql);

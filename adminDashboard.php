@@ -82,7 +82,6 @@ session_start();
                                 <i class = "fas fa-user me-2"></i> Admin
                             </a> 
                             <ul class = "dropdown-menu" aria-labelledby = "navbarDropdown">
-                                <li> <a href = "#" class = "dropdown-item"> Profile </a></li>
                                 <li> <a href = "#" id = "logout-btn" class = "dropdown-item" onclick = "openForm()"> Logout </a></li> 
                             </ul>
 
@@ -105,7 +104,7 @@ session_start();
                                 <?php
                                     include "dbconn.php";
 
-                                    $tenants_query = "SELECT * FROM tenant_acc";
+                                    $tenants_query = "SELECT * FROM tenant_profile";
                                     $tenants_query_num = mysqli_query($conn, $tenants_query);
 
                                     if ($tenants_total = mysqli_num_rows($tenants_query_num)) {
@@ -135,9 +134,9 @@ session_start();
                                         echo '<h3 class = "fs-2"> No Data </h3>';
                                     }
                                 ?>
-                                <p class = "fs-5 box"> No. of Rooms </p>
+                                <p class = "fs-5 box"> Occupied Rooms </p>
                             </div> 
-                            <i class = "fas fa-door-open fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                            <i class = "fas fa-bed fs-1 primary-text border rounded-full secondary-bg p-3"></i>
                         </div>
                     </div>
 
@@ -145,9 +144,9 @@ session_start();
                         <div class = "p-3 bg-white border = 2 shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div> 
                                 <h3 class = "fs-2"> 26</h3>
-                                <p class = "fs-5 box"> No. of Beds </p>
+                                <p class = "fs-5 box"> Available Rooms </p>
                             </div> 
-                            <i class = "fas fa-bed fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                            <i class = "fas fa-door-open fs-1 primary-text border rounded-full secondary-bg p-3"></i>
                         </div>
                     </div>
                 </div>
