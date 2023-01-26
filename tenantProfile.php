@@ -57,9 +57,9 @@
                         <i class = "fas fa-commenting me-2"> </i> Suggestion From Tenants
                     </a>
                     <a href = "invoice.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-file-invoice-dollar me-2"> </i> Invoice
+                        <i class = "fas fa-file-invoice-dollar me-2"> </i> Statement of Account
                     </a>
-                    <a href = "invoice.php" class = "list-group-item second-text active">
+                    <a href = "paymentSent.php" class = "list-group-item second-text active">
                         <i class = "fas fa-file-invoice-dollar me-2"> </i> Payment Sent by Tenants
                     </a>
                     <a href = "collectibles.php" class = "list-group-item second-text active">
@@ -95,6 +95,10 @@
                 </div>
             </nav>
 
+            <!--<div class = "table-container">
+
+            <div class="search_wrap search_wrap_1">
+
                 <?php
                     include "dbconn.php";
 
@@ -108,7 +112,7 @@
                     }
                 ?>
                     
-                         <!-- ADD NEW BUTTON --> 
+                          ADD NEW BUTTON --> 
             <div class="margin">   
             <a href="#" class = "btn btn-add mb-5" onclick = "openAdd()"> 
                     <i class="fa fa-user-plus"style="font-size:23px;float:left" ></i> Add New 
@@ -133,8 +137,7 @@
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
-                        <th scope="col">First Name</th>
-                        <th scope="col">Last Name</th>
+                        <th scope="col">Name</th>
                         <th scope="col">Contact No.</th>
                         <th scope="col">Actions</th>
                     </tr>
@@ -155,21 +158,17 @@
                             $previous = $page - 1;
                             $next = $page + 1;
 
-                            $sql = "SELECT * FROM tenant_acc LIMIT $offset, $limit";
+                            $sql = "SELECT contactNo, CONCAT(firstname,' ', lastname) AS fullName FROM tenant_profile LIMIT $offset, $limit";
                             $result = mysqli_query($conn, $sql);
 
                             while ($row = mysqli_fetch_assoc($result)) {
                                 ?>
                                     <tr class = "data-row"> 
-                                        <td> <?php echo $row['firstname'] ?> </td>
-                                        <td> <?php echo $row['lastname'] ?> </td>
-                                        <td> <?php echo $row['conNum'] ?> </td>
+                                        <td> <?php echo $row['fullName'] ?> </td>
+                                        <td> <?php echo $row['contactNo'] ?> </td>
                                         <td>
                                             <a href = "#" class = "action-icon link-dark">
                                             <i class = "fa-solid fa-eye fs-5 me-3"> </i>
-                                            </a>
-                                            <a hre  f = "" class = "action-icon link-dark" >
-                                            <i class = "fa-solid fa-trash fs-5"></i>
                                             </a> 
                                         </td>
                                     </tr>
@@ -183,7 +182,7 @@
                 <ul class="pagination">
                     <?php
 
-                    $query =  "SELECT COUNT(*) FROM tenant_acc";
+                    $query =  "SELECT COUNT(*) FROM tenant_profile";
                     $result_count = mysqli_query($conn, $query);
                     $records = mysqli_fetch_row($result_count);
                     $total_records = $records[0];
@@ -279,7 +278,7 @@ $(document).ready(function(){
                     </div>
                     <div class="form-group">
                         <label>Contact Number:</label>
-                        <input type="text" name="conNum" id="conNum" class="form-control" pattern="[0-9]*"  required="">
+                        <input type="text" name="contactNo" id="contactNo" class="form-control" pattern="[0-9]*"  required="">
 
                     </div>
                     <br>

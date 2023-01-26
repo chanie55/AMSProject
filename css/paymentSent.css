@@ -140,7 +140,7 @@
 
 .btn-add {
     background-color: #a1f8a4;
-    margin-left: 118px;
+    margin-left: 120px;
     margin-top: 5%;
     font-weight: bold;
     color: #2f3031;
@@ -228,8 +228,9 @@
 }
 
 .cancel {
-    margin-right: 10px;
-    border: 1px solid black;   
+    float: left;
+    background-color: #0ba310;
+    border: none;
 }
 
 .formHeader {
@@ -242,7 +243,6 @@
 }
 
 /** TABLE CSS **/
-
 .table-wrapper {
     min-width: 10%;
     background: #fff;
@@ -348,69 +348,6 @@ table.table td i {
     height: 120px;
 }
 
-.editPen{
-    background-color: #009d63;
-    color: whitesmoke;
-    width: 60px;
-    height: 30px;
+.container-xl {
+    margin-top: 70px;
 }
-
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 23px;
-  }
-  
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgb(175, 0, 0);
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 15px;
-    width: 15px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(30px);
-    -ms-transform: translateX(30px);
-    transform: translateX(30px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
