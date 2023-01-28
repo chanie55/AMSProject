@@ -118,7 +118,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Khytryn Faye Carcillar</td>
+                        <td>₱4,879.25</td>
                         <td>01/18/2023</td>
                         <td>Reciept Screenshot</td>
                         <td>Acknowledged</td>
@@ -132,7 +132,7 @@
 
                 <tbody>
                     <tr>
-                        <td>Beverly Jane Gicale</td>
+                        <td>₱6,909.25</td>
                         <td>01/17/2023</td>
                         <td>Reciept Screenshot</td>
                         <td>Acknowledged</td>

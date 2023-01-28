@@ -70,7 +70,7 @@ session_start();
                                 <i class = "fas fa-user me-2"></i> Tenant 
                             </a> 
                             <ul class = "dropdown-menu" aria-labelledby = "navbarDropdown">
-                                <li> <a href = "#" class = "dropdown-item"> Profile </a></li>
+                            <li> <a href = "tenantProfileSettings.php" class = "dropdown-item"> Edit Profile </a></li>
                                 <li> <a href = "#" class = "dropdown-item" onclick = "openForm()"> Logout </a></li> 
                             </ul>
 
@@ -80,12 +80,7 @@ session_start();
 
                 </div>
             </nav>
-             <!-- ADD NEW BUTTON --> 
-        <div class="margin">   
-            <a href="#" class = "btn btn-add mb-5" onclick = "openAdd()"> 
-                    <i class="fa fa-user-plus"style="font-size:23px;float:left" ></i> Add New 
-                </a>
-            </div>
+           
         <!-- TABLE -->
     <div class="container-xl">
         <div class="table-wrapper">

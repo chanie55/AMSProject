@@ -63,7 +63,7 @@
                         <i class = "fas fa-commenting me-2"> </i> Suggestion From Tenants
                     </a>
                     <a href = "invoice.php" class = "list-group-item second-text active">
-                        <i class = "fas fa-file-invoice-dollar me-2"> </i> Invoice
+                        <i class = "fas fa-file-invoice-dollar me-2"> </i> Statement of Account
                     </a>
                     <a href = "invoice.php" class = "list-group-item second-text active">
                         <i class = "fas fa-file-invoice-dollar me-2"> </i> Payment Sent by Tenants
@@ -90,7 +90,6 @@
                                 <i class = "fas fa-user me-2"></i> Admin 
                             </a> 
                             <ul class = "dropdown-menu" aria-labelledby = "navbarDropdown">
-                                <li> <a href = "#" class = "dropdown-item"> Profile </a></li>
                                 <li> <a href = "#" class = "dropdown-item" onclick = "openForm()"> Logout </a></li> 
                             </ul>
 

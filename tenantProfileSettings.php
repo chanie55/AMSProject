@@ -22,41 +22,6 @@
           </div>
           <div class="col-md-5 border-right">
 
-          <thead>
-            <tr>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Mobile Number</th>
-            <th scope="col">Address </th>
-            <th scope="col">Email Address</th>
-            <th scope="col">Occupation</th>
-            <th scope="col">Gender</th>
-            <th scope="col">Birthdate</th>
-            </tr>
-          </thead>
-          <tbody>
-              <?php
-
-              include "dbconn.php";
-              $sql = "SELECT * FROM tenant_prof";
-              $result = mysqli_query($conn, $sql);
-
-              while ($row = mysqli_fetch_assoc($result)){
-                ?>
-                <tr class="data-row">
-                  <td> <?php echo $row['firstname'] ?> </td>
-                  <td> <?php echo $row['lastname']?> </td>
-                  <td> <?php echo $row['mobilenum']?> </td>
-                  <td> <?php echo $row['address']?> </td>
-                  <td> <?php echo $row['emailadd']?> </td>
-                  <td> <?php echo $row['occupation']?> </td>
-                  <td> <?php echo $row['gender']?> </td>
-                  <td> <?php echo $row['birthdate']?> </td>
-                </tr>
-                <?php
-              }
-              ?>
-          </tbody>
               <div class="p-2 py-4">
                   <div class="d-flex justify-content-between align-items-center mb-3">
                       <h4 class="text-right" style="color:#009d63">Profile Settings</h4>

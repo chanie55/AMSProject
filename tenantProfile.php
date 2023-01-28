@@ -87,8 +87,7 @@
                                 data-bs-toggle = "dropdown" aria-expanded = "false">
                                 <i class = "fas fa-user me-2"></i> Admin
                             </a> 
-                            <ul class = "dropdown-menu" aria-labelledby = "navbarDropdown">
-                                <li> <a href = "tenantProfileSettings.php" class = "dropdown-item"> Profile </a></li>
+                            <ul class = "dropdown-menu" aria-labelledby = "navbarDropdown">                    
                                 <li> <a href = "#" class = "dropdown-item" onclick = "openForm()"> Logout </a></li> 
                             </ul>
 
